@@ -17,3 +17,5 @@ These are experimental works in progress. The parsers only parse four top-level 
 
 - Finish parsers
 - Add cross-parser serialization/deserialization tests
+- (Wishlist) find a common PEG syntax that every language can use
+- (Wishlist) Define WIDL's IDl in WIDL and parse WIDL with WIDL
