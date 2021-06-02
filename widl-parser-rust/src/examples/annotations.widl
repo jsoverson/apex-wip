@@ -1,0 +1,26 @@
+"namespace"
+namespace "mandelbrot" @ns
+
+"interface"
+interface @iface{
+    "operation"
+    update(width : u32 @arg "op arg", height: u32, limit: u32): [u16] @returnval
+}
+"enum"
+enum SDAF @enum {
+  "enum value"
+  FOO = 1 "bar" @enumval
+  BAR = 2
+}
+"type"
+type Test @type {
+  "typefield"
+  foo: string @typefield(value: 1234) @length(5)
+    @response(
+      status: CREATED,
+      examples: {
+        "application/json": "json",
+        csv: "csv"
+      }
+    )
+}

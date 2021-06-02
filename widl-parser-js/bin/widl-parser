@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+/* eslint-disable */
+
+const { parse } = require('../src/generated/generated.js');
+const fs = require('fs');
+
+const tree = parse(fs.readFileSync(process.argv[2], 'utf-8'));
+
+console.log(JSON.stringify(tree, null, 2));

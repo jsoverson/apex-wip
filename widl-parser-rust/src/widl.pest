@@ -1,0 +1,131 @@
+
+document = { NEWLINE* ~ (definition ~ NEWLINE+)* }
+
+definition
+  = { (namespaceDefinition | typeDefinition | interfaceDefinition | enumDefinition | importDefinition) }
+
+namespaceDefinition  = { namespaceKeyword ~ quoted_string }
+
+importDefinition = {
+  importKeyword ~ (wildcardImport | (beginObjectChar ~ importName* ~ endObjectChar)) ~
+  fromKeyword ~ quoted_string
+  }
+
+importName = {identifier ~ (renameKeyword ~ identifier)? ~ argumentSeparator?
+  }
+
+typeDefinition = {
+  typeKeyword ~ identifier ~ beginObjectChar ~ NEWLINE+ ~ (typeFieldDefinition ~ NEWLINE)* ~ endObjectChar
+  }
+
+enumDefinition = {
+  enumKeyword ~ identifier ~ beginObjectChar ~  NEWLINE+ ~ (enumValue ~ NEWLINE)* ~ endObjectChar
+  }
+
+enumValue = {
+  identifier ~ assignmentOperator ~ integer? ~ quoted_string?
+  }
+
+interfaceDefinition = {
+  interfaceKeyword ~ beginObjectChar ~ NEWLINE* ~ (operationDefinition ~ NEWLINE)* ~ endObjectChar
+  }
+
+operationDefinition = { identifier ~ beginArgumentsChar ~ parameterDefinition* ~ endArgumentsChar ~ kvSeparator ~ typeReference }
+
+parameterDefinition = { nameTypePair ~ argumentSeparator? }
+
+typeFieldDefinition = { nameTypePair }
+
+typeReference = {
+  (mapType | listType | primitiveType | namedType)~optionalOperator?
+  }
+
+primitiveType = {
+   ( "i8" |
+  "u8" |
+  "i16" |
+  "u16" |
+  "i32" |
+  "u32" |
+  "i64" |
+  "u64" |
+  "f32" |
+  "f64" |
+  "bool" |
+  "string" |
+  "datetime" |
+  "bytes" |
+  "raw" |
+  "value" ) }
+
+namedType = { identifier }
+
+nameTypePair = _{identifier ~ kvSeparator ~ typeReference }
+
+mapType = { beginObjectChar ~ typeReference ~ kvSeparator ~ typeReference ~ endObjectChar  }
+
+listType = { beginListChar ~ typeReference ~ endListChar }
+
+_string = @{ quotation_mark ~ char* ~ quotation_mark }
+
+string = @{ ("\\\"" | "\\" ~ NEWLINE | !("\"" | NEWLINE) ~ char)* }
+quoted_string = _{
+	(quotation_mark ~ string ~ quotation_mark)
+}
+
+// Keywords
+
+interfaceKeyword = _{"interface"}
+namespaceKeyword = _{"namespace"}
+typeKeyword = _{"type"}
+enumKeyword = _{"enum"}
+importKeyword = _{"import"}
+renameKeyword = _{"as"}
+fromKeyword = _{"from"}
+
+// Operators
+
+wildcardImport = { "*" }
+beginObjectChar = _{"{"}
+endObjectChar = _{"}"}
+beginListChar = _{"["}
+endListChar = _{"]"}
+beginArgumentsChar = _{"("}
+endArgumentsChar = _{")"}
+argumentSeparator = _{","}
+kvSeparator =  _{":"}
+optionalOperator = {"?"}
+assignmentOperator = _{"="}
+
+identifier = @{identifierStartChar ~ identifierOtherChar*}
+
+identifierStartChar = {'a'..'z' | 'A'..'Z' | "_"}
+identifierOtherChar = {'0'..'9' | identifierStartChar }
+
+integer = @{ DIGIT+ }
+
+char
+  = @{
+    unescaped
+  | escape ~
+    (
+        "\""
+      | "\\"
+      | "|"
+      | "b"
+      | "f"
+      | "n"
+      | "r"
+      | "t"
+    )
+  }
+
+escape         = {"\\"}
+quotation_mark = _{"\""}
+unescaped      = {'\x20'..'\x21' | '\x23'..'\x5B' | '\x5D'..'\u{FFFF}'}
+
+DIGIT  = _{'0'..'9'}
+HEXDIG = {'0'..'9' | 'a'..'f' | 'A'..'F'}
+WHITESPACE = _{" "|"\t"}
+NEWLINE = _{ "\n" | "\r" }
+

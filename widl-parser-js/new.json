@@ -1,0 +1,329 @@
+{
+  "kind": "Document",
+  "definitions": [
+    {
+      "kind": "NamespaceDefinition",
+      "name": {
+        "kind": "StringValue",
+        "value": "example:widl"
+      }
+    },
+    {
+      "kind": "InterfaceDefinition",
+      "operations": [
+        {
+          "kind": "OperationDefinition",
+          "name": {
+            "kind": "Name"
+          },
+          "description": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "default": [
+            {
+              "name": {
+                "kind": "Name"
+              },
+              "default": {
+                "kind": "Named",
+                "name": {
+                  "kind": "Name",
+                  "value": "string"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TypeDefinition",
+      "name": {
+        "kind": "Name"
+      },
+      "fields": [],
+      "annotations": [
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "i8"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "u8"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "i16"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "u16"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "i32"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "u32"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "i64"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "u64"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "f32"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "f64"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "bool"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "string"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "datetime"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "bytes"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "raw"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "value"
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Optional",
+            "type": {
+              "kind": "Named",
+              "name": {
+                "kind": "Name",
+                "value": "bool"
+              }
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "MapType",
+            "keyType": {
+              "kind": "Named",
+              "name": {
+                "kind": "Name",
+                "value": "string"
+              }
+            },
+            "valueType": {
+              "kind": "Named",
+              "name": {
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "ListType",
+            "type": {
+              "kind": "Named",
+              "name": {
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "TypeDefinition",
+      "name": {
+        "kind": "Name"
+      },
+      "fields": [],
+      "annotations": [
+        {
+          "name": {
+            "kind": "Name"
+          },
+          "default": {
+            "kind": "Named",
+            "name": {
+              "kind": "Name",
+              "value": "u8"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

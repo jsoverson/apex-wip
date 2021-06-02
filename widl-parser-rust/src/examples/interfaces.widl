@@ -1,0 +1,4 @@
+
+interface {
+  sayHello(message:string): string
+}

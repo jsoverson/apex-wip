@@ -1,0 +1,46 @@
+{
+  "kind": "Document",
+  "definitions": [
+    {
+      "kind": "EnumDefinition",
+      "name": { "kind": "Name", "value": "One" },
+      "values": [
+        {
+          "kind": "EnumValueDefinition",
+          "name": { "kind": "Name", "value": "FOO" },
+          "index": { "kind": "IntValue", "value": 1 },
+          "display": { "kind": "StringValue", "value": "bar" }
+        },
+        {
+          "kind": "EnumValueDefinition",
+          "name": { "kind": "Name", "value": "BAR" },
+          "index": { "kind": "IntValue", "value": 2 }
+        }
+      ]
+    },
+    {
+      "kind": "EnumDefinition",
+      "name": { "kind": "Name", "value": "Two" },
+      "values": [
+        {
+          "kind": "EnumValueDefinition",
+          "name": { "kind": "Name", "value": "first" },
+          "index": { "kind": "IntValue", "value": 0 },
+          "display": { "kind": "StringValue", "value": "First" }
+        },
+        {
+          "kind": "EnumValueDefinition",
+          "name": { "kind": "Name", "value": "second" },
+          "index": { "kind": "IntValue", "value": 1 },
+          "display": { "kind": "StringValue", "value": "Second" }
+        },
+        {
+          "kind": "EnumValueDefinition",
+          "name": { "kind": "Name", "value": "third" },
+          "index": { "kind": "IntValue", "value": 2 },
+          "display": { "kind": "StringValue", "value": "Third" }
+        }
+      ]
+    }
+  ]
+}
