@@ -66,7 +66,6 @@ export function codegen(idl: Idl, attributeOrder: Record<string, string[]>): str
   function nameTypePair(member: AttributeMemberType) {
     const optionalToken = member.idlType.nullable ? '?' : '';
     const type = tsType(idl.idlTypeToType(member.idlType));
-    console.error({ type });
 
     return { name: member.name, optionalToken, type };
   }

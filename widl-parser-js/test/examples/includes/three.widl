@@ -1,0 +1,12 @@
+
+type One {
+  some : i64
+}
+
+type Two {
+  other : string
+}
+
+type Three {
+  other : string
+}

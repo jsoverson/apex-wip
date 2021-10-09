@@ -1,0 +1,3 @@
+
+import * from "includes/all.widl"
+import { One, Two } from "includes/three.widl"

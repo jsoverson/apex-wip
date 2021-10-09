@@ -110,7 +110,6 @@ interface ImportDefinition : Node {
 interface TypeDefinition : Node {
     attribute Name name;
     attribute StringValue? description;
-    attribute sequence<Named>? interfaces;
     attribute sequence<FieldDefinition> fields;
     attribute sequence<Annotation>? annotations;
 };
@@ -196,8 +195,8 @@ interface ListType : Node {
 };
 
 interface MapType : Node {
-    attribute TypeReference keytype;
-    attribute TypeReference valuetype;
+    attribute TypeReference keyType;
+    attribute TypeReference valueType;
 };
 
 interface Optional : Node {

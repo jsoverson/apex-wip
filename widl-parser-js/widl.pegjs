@@ -1,9 +1,12 @@
 {
+
 const ast = require('widl-ast');
+
 function widlLocation() {
   const loc = location();
   return new ast.Location(loc.start.offset, loc.end.offset, "");
 }
+
 function annotations() {
   //placeholder
   return undefined;
@@ -33,7 +36,7 @@ importDefinition "import definition" =
   {
     const all = imports === '*';
     const names = all ? [] : imports;
-    return new ast.ImportDefinition(undefined,all,names,from, annotations());
+    return new ast.ImportDefinition(all,names,from,undefined, annotations());
   }
 
 importName = name:identifier ws alias:(renameKeyword ws @identifier)? argumentSeparator?
@@ -45,7 +48,7 @@ importName = name:identifier ws alias:(renameKeyword ws @identifier)? argumentSe
 typeDefinition "type definition" =
   typeKeyword ws name:identifier ws beginObjectChar ws fields:(ws @typeField eol)* ws endObjectChar
   {
-    return new ast.TypeDefinition(name, fields, /*interfaces?*/[], undefined, annotations());
+    return new ast.TypeDefinition(name, fields, undefined, annotations());
   }
 
 enumDefinition "enum definition" =

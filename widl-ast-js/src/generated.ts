@@ -235,21 +235,13 @@ export class ImportDefinition extends Node {
 export class TypeDefinition extends Node {
   name: Name;
   description?: StringValue;
-  interfaces?: Named[];
   fields: FieldDefinition[];
   annotations?: Annotation[];
-  constructor(
-    name: Name,
-    fields: FieldDefinition[],
-    interfaces?: Named[],
-    description?: StringValue,
-    annotations?: Annotation[],
-  ) {
+  constructor(name: Name, fields: FieldDefinition[], description?: StringValue, annotations?: Annotation[]) {
     super('TypeDefinition');
     this.kind = 'TypeDefinition';
     this.name = name;
     this.description = description;
-    this.interfaces = interfaces;
     this.fields = fields;
     this.annotations = annotations;
   }
@@ -459,13 +451,13 @@ export class ListType extends Node {
 }
 
 export class MapType extends Node {
-  keytype: TypeReference;
-  valuetype: TypeReference;
-  constructor(keytype: TypeReference, valuetype: TypeReference) {
+  keyType: TypeReference;
+  valueType: TypeReference;
+  constructor(keyType: TypeReference, valueType: TypeReference) {
     super('MapType');
     this.kind = 'MapType';
-    this.keytype = keytype;
-    this.valuetype = valuetype;
+    this.keyType = keyType;
+    this.valueType = valueType;
   }
 }
 

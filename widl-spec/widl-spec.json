@@ -1,0 +1,1336 @@
+{
+  "all_nodes": [
+    "Node",
+    "Value",
+    "Document",
+    "Annotation",
+    "Argument",
+    "DirectiveRequire",
+    "ImportName",
+    "NamespaceDefinition",
+    "AliasDefinition",
+    "ImportDefinition",
+    "TypeDefinition",
+    "OperationDefinition",
+    "FieldDefinition",
+    "ParameterDefinition",
+    "InterfaceDefinition",
+    "RoleDefinition",
+    "UnionDefinition",
+    "EnumDefinition",
+    "EnumValueDefinition",
+    "DirectiveDefinition",
+    "Name",
+    "Named",
+    "ListType",
+    "MapType",
+    "Optional",
+    "IntValue",
+    "FloatValue",
+    "StringValue",
+    "BooleanValue",
+    "EnumValue",
+    "ListValue",
+    "ObjectValue",
+    "ObjectField"
+  ],
+  "enums": [
+    {
+      "name": "PrimitiveType",
+      "values": [
+        "i8",
+        "u8",
+        "i16",
+        "u16",
+        "i32",
+        "u32",
+        "i64",
+        "u64",
+        "f32",
+        "f64",
+        "bool",
+        "string",
+        "datetime",
+        "bytes",
+        "raw",
+        "value"
+      ]
+    }
+  ],
+  "typedefs": [
+    {
+      "name": "Definition",
+      "type": {
+        "type": "union",
+        "def": [
+          {
+            "type": "interface",
+            "def": "NamespaceDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "TypeDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "AliasDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "ImportDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "InterfaceDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "RoleDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "EnumDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "DirectiveDefinition"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LiteralValue",
+      "type": {
+        "type": "union",
+        "def": [
+          {
+            "type": "interface",
+            "def": "IntValue"
+          },
+          {
+            "type": "interface",
+            "def": "FloatValue"
+          },
+          {
+            "type": "interface",
+            "def": "StringValue"
+          },
+          {
+            "type": "interface",
+            "def": "BooleanValue"
+          },
+          {
+            "type": "interface",
+            "def": "EnumValue"
+          },
+          {
+            "type": "interface",
+            "def": "ListValue"
+          },
+          {
+            "type": "interface",
+            "def": "ObjectValue"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TypeReference",
+      "type": {
+        "type": "union",
+        "def": [
+          {
+            "type": "enum",
+            "def": "PrimitiveType"
+          },
+          {
+            "type": "interface",
+            "def": "Named"
+          },
+          {
+            "type": "interface",
+            "def": "ListType"
+          },
+          {
+            "type": "interface",
+            "def": "MapType"
+          },
+          {
+            "type": "interface",
+            "def": "Optional"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AstNode",
+      "type": {
+        "type": "union",
+        "def": [
+          {
+            "type": "interface",
+            "def": "Value"
+          },
+          {
+            "type": "interface",
+            "def": "Document"
+          },
+          {
+            "type": "interface",
+            "def": "Annotation"
+          },
+          {
+            "type": "interface",
+            "def": "Argument"
+          },
+          {
+            "type": "interface",
+            "def": "DirectiveRequire"
+          },
+          {
+            "type": "interface",
+            "def": "ImportName"
+          },
+          {
+            "type": "interface",
+            "def": "AliasDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "ImportDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "TypeDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "OperationDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "FieldDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "ParameterDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "InterfaceDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "RoleDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "UnionDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "EnumDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "EnumValueDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "DirectiveDefinition"
+          },
+          {
+            "type": "interface",
+            "def": "ListType"
+          },
+          {
+            "type": "interface",
+            "def": "MapType"
+          },
+          {
+            "type": "interface",
+            "def": "Optional"
+          },
+          {
+            "type": "interface",
+            "def": "IntValue"
+          },
+          {
+            "type": "interface",
+            "def": "FloatValue"
+          },
+          {
+            "type": "interface",
+            "def": "StringValue"
+          },
+          {
+            "type": "interface",
+            "def": "BooleanValue"
+          },
+          {
+            "type": "interface",
+            "def": "EnumValue"
+          },
+          {
+            "type": "interface",
+            "def": "ListValue"
+          },
+          {
+            "type": "interface",
+            "def": "ObjectValue"
+          },
+          {
+            "type": "interface",
+            "def": "ObjectField"
+          }
+        ]
+      }
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "Node",
+      "inherits": null,
+      "properties": [
+        {
+          "name": "kind",
+          "optional": false,
+          "type": {
+            "type": "webidl-primitive",
+            "def": "string"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Value",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "enum",
+            "def": "PrimitiveType"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Document",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "definitions",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "typedef",
+              "def": "Definition"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Annotation",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "arguments",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "Argument"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Argument",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Value"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DirectiveRequire",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "directive",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "locations",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "webidl-primitive",
+              "def": "Location"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ImportName",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "alias",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "Name"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "NamespaceDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "StringValue"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "AliasDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "type",
+          "optional": false,
+          "type": {
+            "type": "typedef",
+            "def": "TypeReference"
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ImportDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "all",
+          "optional": false,
+          "type": {
+            "type": "webidl-primitive",
+            "def": "boolean"
+          }
+        },
+        {
+          "name": "names",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "ImportName"
+            }
+          }
+        },
+        {
+          "name": "from",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "StringValue"
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "TypeDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "interfaces",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Named"
+              }
+            }
+          }
+        },
+        {
+          "name": "fields",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "FieldDefinition"
+            }
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "OperationDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "parameters",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "ParameterDefinition"
+            }
+          }
+        },
+        {
+          "name": "type",
+          "optional": false,
+          "type": {
+            "type": "typedef",
+            "def": "TypeReference"
+          }
+        },
+        {
+          "name": "unary",
+          "optional": false,
+          "type": {
+            "type": "webidl-primitive",
+            "def": "boolean"
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "FieldDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "type",
+          "optional": false,
+          "type": {
+            "type": "typedef",
+            "def": "TypeReference"
+          }
+        },
+        {
+          "name": "default",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "Value"
+            }
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ParameterDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "type",
+          "optional": false,
+          "type": {
+            "type": "typedef",
+            "def": "TypeReference"
+          }
+        },
+        {
+          "name": "default",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "Value"
+            }
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "InterfaceDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "operations",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "OperationDefinition"
+            }
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "RoleDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "operations",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "OperationDefinition"
+            }
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "UnionDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "types",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "Named"
+            }
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EnumDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "values",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "EnumValueDefinition"
+            }
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EnumValueDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "index",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "IntValue"
+          }
+        },
+        {
+          "name": "display",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "annotations",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "list",
+              "def": {
+                "type": "interface",
+                "def": "Annotation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "DirectiveDefinition",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "description",
+          "optional": true,
+          "type": {
+            "type": "nullable",
+            "def": {
+              "type": "interface",
+              "def": "StringValue"
+            }
+          }
+        },
+        {
+          "name": "parameters",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "ParameterDefinition"
+            }
+          }
+        },
+        {
+          "name": "locations",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "Name"
+            }
+          }
+        },
+        {
+          "name": "requires",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "DirectiveRequire"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Name",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "webidl-primitive",
+            "def": "string"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Named",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ListType",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "type",
+          "optional": false,
+          "type": {
+            "type": "typedef",
+            "def": "TypeReference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MapType",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "keyType",
+          "optional": false,
+          "type": {
+            "type": "typedef",
+            "def": "TypeReference"
+          }
+        },
+        {
+          "name": "valuetype",
+          "optional": false,
+          "type": {
+            "type": "typedef",
+            "def": "TypeReference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Optional",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "type",
+          "optional": false,
+          "type": {
+            "type": "typedef",
+            "def": "TypeReference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IntValue",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "webidl-primitive",
+            "def": "unsigned_long_long"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FloatValue",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "webidl-primitive",
+            "def": "double"
+          }
+        }
+      ]
+    },
+    {
+      "name": "StringValue",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "webidl-primitive",
+            "def": "string"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BooleanValue",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "webidl-primitive",
+            "def": "boolean"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EnumValue",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "webidl-primitive",
+            "def": "string"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ListValue",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "Value"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ObjectValue",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "fields",
+          "optional": false,
+          "type": {
+            "type": "list",
+            "def": {
+              "type": "interface",
+              "def": "ObjectField"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ObjectField",
+      "inherits": "Node",
+      "properties": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Name"
+          }
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": {
+            "type": "interface",
+            "def": "Value"
+          }
+        }
+      ]
+    }
+  ]
+}

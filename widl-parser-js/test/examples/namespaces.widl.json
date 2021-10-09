@@ -1,1 +1,4 @@
-{"kind":"Document","definitions":[{"kind":"NamespaceDefinition","name":{"kind":"Name","value":"example:widl"}}]}
+{
+  "kind": "Document",
+  "definitions": [{ "kind": "NamespaceDefinition", "name": { "kind": "StringValue", "value": "example:widl" } }]
+}

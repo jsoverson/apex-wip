@@ -3,13 +3,15 @@ import { describe } from 'mocha';
 import fs from 'fs';
 import path from 'path';
 
-import { parse } from '../src/parser';
+import { parse, WidlAst } from '../src/parser';
 
-function assertParity(source: string): string {
+function assertParity(source: string): WidlAst {
   const result = parse(fs.readFileSync(path.join(__dirname, 'examples', `${source}.widl`), 'utf-8'));
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const oldTree = require(`./examples/${source}.widl.json`);
-  const newTree = JSON.parse(JSON.stringify(result, (key: string, val: any) => (key === 'loc' ? undefined : val)));
+  const newTree = JSON.parse(
+    JSON.stringify(result.document, (key: string, val: any) => (key === 'loc' ? undefined : val)),
+  );
   expect(newTree).to.deep.equal(oldTree);
   return result;
 }
@@ -33,6 +35,11 @@ describe('parser', function () {
   });
   it('should parse imports', () => {
     const result = assertParity('imports');
+    expect(result).to.be.instanceOf(Object);
+  });
+
+  it('should parse imports with a resolver', () => {
+    const result = assertParity('imports-resolver');
     expect(result).to.be.instanceOf(Object);
   });
 });

@@ -6,9 +6,9 @@
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "codegen:rust": "ts-node src/bin/generate-rust-ast.ts widl.idl",
-    "codegen:typescript": "ts-node src/bin/generate-typescript-ast.ts widl.idl attribute-order.json",
-    "build:json": "ts-node src/bin/generate-typescript-ast.ts widl.idl",
+    "codegen:rust": "ts-node src/bin/generate-rust-ast.ts widl.idl > generated/ast-nodes.rs",
+    "codegen:typescript": "ts-node src/bin/generate-typescript-ast.ts widl.idl attribute-order.json > generated/ast-nodes.ts",
+    "build:json": "ts-node src/bin/generate-json.ts widl.idl > widl-spec.json",
     "build": "tsc --declaration",
     "compile": "npm run clean && npm run build",
     "clean": "rimraf dist",
@@ -42,7 +42,8 @@
     "prettier": "^2.3.0",
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "webidl2": "^24.1.2"
   },
   "dependencies": {}
 }
