@@ -3,15 +3,15 @@ import { describe } from 'mocha';
 import fs from 'fs';
 import path from 'path';
 
-import { parse, WidlAst } from '../src/parser';
+import { parse, Resolver } from '../src/parser';
+import { Document } from 'widl-ast';
 
-function assertParity(source: string): WidlAst {
-  const result = parse(fs.readFileSync(path.join(__dirname, 'examples', `${source}.widl`), 'utf-8'));
+function assertParity(source: string, resolver?: Resolver): Document {
+  const widl = fs.readFileSync(path.join(__dirname, 'examples', `${source}.widl`), 'utf-8');
+  const result = parse(widl, resolver);
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const oldTree = require(`./examples/${source}.widl.json`);
-  const newTree = JSON.parse(
-    JSON.stringify(result.document, (key: string, val: any) => (key === 'loc' ? undefined : val)),
-  );
+  const newTree = JSON.parse(JSON.stringify(result, (key: string, val: any) => (key === 'loc' ? undefined : val)));
   expect(newTree).to.deep.equal(oldTree);
   return result;
 }
@@ -39,7 +39,9 @@ describe('parser', function () {
   });
 
   it('should parse imports with a resolver', () => {
-    const result = assertParity('imports-resolver');
+    const result = assertParity('imports-resolver', (name: string): string => {
+      return fs.readFileSync(path.join(__dirname, 'examples', name), 'utf-8');
+    });
     expect(result).to.be.instanceOf(Object);
   });
 });

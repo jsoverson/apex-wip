@@ -21,6 +21,7 @@
   "DirectiveDefinition": ["name", "parameters", "locations", "requires", "description"],
   "Name": ["value"],
   "Named": ["name"],
+  "Primitive": ["type"],
   "ListType": ["type"],
   "MapType": ["keyType", "valueType"],
   "Optional": ["type"],

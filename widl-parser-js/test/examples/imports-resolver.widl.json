@@ -5,21 +5,60 @@
       "kind": "ImportDefinition",
       "all": true,
       "names": [],
-      "from": { "kind": "StringValue", "value": "@test/test/test" }
+      "from": { "kind": "StringValue", "value": "includes/two.widl" }
     },
     {
       "kind": "ImportDefinition",
       "all": false,
       "names": [
-        { "kind": "ImportName", "name": { "kind": "Name", "value": "Blah" } },
-        { "kind": "ImportName", "name": { "kind": "Name", "value": "Blah" } },
-        {
-          "kind": "ImportName",
-          "name": { "kind": "Name", "value": "Blah" },
-          "alias": { "kind": "Name", "value": "Test" }
-        }
+        { "kind": "ImportName", "name": { "kind": "Name", "value": "One" } },
+        { "kind": "ImportName", "name": { "kind": "Name", "value": "Two" } }
       ],
-      "from": { "kind": "StringValue", "value": "@test/test/test" }
+      "from": { "kind": "StringValue", "value": "includes/three.widl" }
+    },
+    {
+      "kind": "TypeDefinition",
+      "name": { "kind": "Name", "value": "A" },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": { "kind": "Name", "value": "prop" },
+          "type": { "kind": "Primitive", "type": "i64" }
+        }
+      ]
+    },
+    {
+      "kind": "TypeDefinition",
+      "name": { "kind": "Name", "value": "B" },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": { "kind": "Name", "value": "prop" },
+          "type": { "kind": "Primitive", "type": "string" }
+        }
+      ]
+    },
+    {
+      "kind": "TypeDefinition",
+      "name": { "kind": "Name", "value": "One" },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": { "kind": "Name", "value": "prop" },
+          "type": { "kind": "Primitive", "type": "i64" }
+        }
+      ]
+    },
+    {
+      "kind": "TypeDefinition",
+      "name": { "kind": "Name", "value": "Two" },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": { "kind": "Name", "value": "prop" },
+          "type": { "kind": "Primitive", "type": "string" }
+        }
+      ]
     }
   ]
 }

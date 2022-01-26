@@ -1,0 +1,8 @@
+
+type A {
+  prop : i64
+}
+
+type B {
+  prop : string
+}

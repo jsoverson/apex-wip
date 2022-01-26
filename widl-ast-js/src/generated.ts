@@ -38,6 +38,7 @@ export const ALL_NODES = [
   'EnumValueDefinition',
   'DirectiveDefinition',
   'Name',
+  'Primitive',
   'Named',
   'ListType',
   'MapType',
@@ -52,7 +53,7 @@ export const ALL_NODES = [
   'ObjectField',
 ];
 
-type PrimitiveType =
+export type PrimitiveType =
   | 'i8'
   | 'u8'
   | 'i16'
@@ -69,7 +70,7 @@ type PrimitiveType =
   | 'bytes'
   | 'raw'
   | 'value';
-type Definition =
+export type Definition =
   | NamespaceDefinition
   | TypeDefinition
   | AliasDefinition
@@ -78,9 +79,9 @@ type Definition =
   | RoleDefinition
   | EnumDefinition
   | DirectiveDefinition;
-type LiteralValue = IntValue | FloatValue | StringValue | BooleanValue | EnumValue | ListValue | ObjectValue;
-type TypeReference = PrimitiveType | Named | ListType | MapType | Optional;
-type AstNode =
+export type LiteralValue = IntValue | FloatValue | StringValue | BooleanValue | EnumValue | ListValue | ObjectValue;
+export type TypeReference = PrimitiveType | Named | ListType | MapType | Optional;
+export type AstNode =
   | Value
   | Document
   | Annotation
@@ -429,6 +430,15 @@ export class Name extends Node {
     super('Name');
     this.kind = 'Name';
     this.value = value;
+  }
+}
+
+export class Primitive extends Node {
+  type: PrimitiveType;
+  constructor(type: PrimitiveType) {
+    super('Primitive');
+    this.kind = 'Primitive';
+    this.type = type;
   }
 }
 

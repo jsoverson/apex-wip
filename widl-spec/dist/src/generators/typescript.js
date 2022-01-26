@@ -32,7 +32,7 @@ function tsType(type) {
     return `${tsType(type.def)}`;
 }
 function enumDef(e) {
-    return `type ${e.name} = ${e.values.map(v => stringify(v.value)).join('|')};`;
+    return `export type ${e.name} = ${e.values.map(v => stringify(v.value)).join('|')};`;
 }
 // As-needed sanitization of reserved identifiers
 function sanitizeIdentifier(name) {
@@ -57,12 +57,11 @@ function codegen(idl, attributeOrder) {
         return order.map(arg => (arg === 'kind' ? stringify(child) : sanitizeIdentifier(arg))).join(',');
     }
     function typeDef(e) {
-        return `type ${e.name} = ${tsType(idl.idlTypeToType(e.idlType))};`;
+        return `export type ${e.name} = ${tsType(idl.idlTypeToType(e.idlType))};`;
     }
     function nameTypePair(member) {
         const optionalToken = member.idlType.nullable ? '?' : '';
         const type = tsType(idl.idlTypeToType(member.idlType));
-        console.error({ type });
         return { name: member.name, optionalToken, type };
     }
     function classTemplate(def) {

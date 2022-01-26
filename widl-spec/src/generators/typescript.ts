@@ -33,7 +33,7 @@ function tsType(type: ConsumerType | string): string {
 }
 
 function enumDef(e: EnumType): string {
-  return `type ${e.name} = ${e.values.map(v => stringify(v.value)).join('|')};`;
+  return `export type ${e.name} = ${e.values.map(v => stringify(v.value)).join('|')};`;
 }
 
 // As-needed sanitization of reserved identifiers
@@ -60,7 +60,7 @@ export function codegen(idl: Idl, attributeOrder: Record<string, string[]>): str
   }
 
   function typeDef(e: TypedefType): string {
-    return `type ${e.name} = ${tsType(idl.idlTypeToType(e.idlType))};`;
+    return `export type ${e.name} = ${tsType(idl.idlTypeToType(e.idlType))};`;
   }
 
   function nameTypePair(member: AttributeMemberType) {

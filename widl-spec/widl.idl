@@ -186,6 +186,10 @@ interface Name : Node {
     attribute string value;
 };
 
+interface Primitive : Node {
+    attribute PrimitiveType type;
+};
+
 interface Named : Node {
     attribute Name name;
 };

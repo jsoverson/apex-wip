@@ -598,20 +598,6 @@
           }
         },
         {
-          "name": "interfaces",
-          "optional": true,
-          "type": {
-            "type": "nullable",
-            "def": {
-              "type": "list",
-              "def": {
-                "type": "interface",
-                "def": "Named"
-              }
-            }
-          }
-        },
-        {
           "name": "fields",
           "optional": false,
           "type": {
@@ -1183,7 +1169,7 @@
           }
         },
         {
-          "name": "valuetype",
+          "name": "valueType",
           "optional": false,
           "type": {
             "type": "typedef",

@@ -79,7 +79,7 @@ argument "argument" = pair:nameTypePair argumentSeparator? { return new ast.Para
 typeField "type field" = pair:nameTypePair {return new ast.FieldDefinition(pair.name, pair.type, undefined, undefined, annotations());}
 
 widlType "valid widl type" =
-  type:(@mapType / @listType / @namedType)optional:optionalOperator? {
+  type:(@mapType / @listType / @primitiveType / @namedType )optional:optionalOperator? {
     if (!!optional) {
       return new ast.Optional(type);
     } else {
@@ -87,8 +87,8 @@ widlType "valid widl type" =
     }
   }
 
-namedType =
-   name:( "i8" /
+primitiveType =
+type:( "i8" /
   "u8" /
   "i16" /
   "u16" /
@@ -103,8 +103,12 @@ namedType =
   "datetime" /
   "bytes" /
   "raw" /
-  "value" /
-  identifier) {
+  "value" ) {
+    return new ast.Primitive(type);
+  }
+
+namedType =
+   name:(identifier) {
     if (typeof name === 'string') {
       return new ast.Named(new ast.Name(name))
     } else {

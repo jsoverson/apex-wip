@@ -5,6 +5,6 @@ import * as ast from '../src';
 
 describe('ast', function () {
   it('should expose all nodes', () => {
-    expect(ast.ALL_NODES.length).to.equal(33);
+    expect(ast.ALL_NODES.length).to.equal(34);
   });
 });

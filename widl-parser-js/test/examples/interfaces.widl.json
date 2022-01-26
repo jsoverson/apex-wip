@@ -11,10 +11,10 @@
             {
               "kind": "ParameterDefinition",
               "name": { "kind": "Name", "value": "message" },
-              "type": { "kind": "Named", "name": { "kind": "Name", "value": "string" } }
+              "type": { "kind": "Primitive", "type": "string" }
             }
           ],
-          "type": { "kind": "Named", "name": { "kind": "Name", "value": "string" } },
+          "type": { "kind": "Primitive", "type": "string" },
           "unary": false
         }
       ]

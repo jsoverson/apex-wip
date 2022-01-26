@@ -1,12 +1,12 @@
 
 type One {
-  some : i64
+  prop : i64
 }
 
 type Two {
-  other : string
+  prop : string
 }
 
 type Three {
-  other : string
+  prop : string
 }

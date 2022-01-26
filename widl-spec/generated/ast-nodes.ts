@@ -1,12 +1,12 @@
 
 export const ALL_TYPES = ["i8","u8","i16","u16","i32","u32","i64","u64","f32","f64","bool","string","datetime","bytes","raw","value"];
-export const ALL_NODES = ["Node","Value","Document","Annotation","Argument","DirectiveRequire","ImportName","NamespaceDefinition","AliasDefinition","ImportDefinition","TypeDefinition","OperationDefinition","FieldDefinition","ParameterDefinition","InterfaceDefinition","RoleDefinition","UnionDefinition","EnumDefinition","EnumValueDefinition","DirectiveDefinition","Name","Named","ListType","MapType","Optional","IntValue","FloatValue","StringValue","BooleanValue","EnumValue","ListValue","ObjectValue","ObjectField"];
+export const ALL_NODES = ["Node","Value","Document","Annotation","Argument","DirectiveRequire","ImportName","NamespaceDefinition","AliasDefinition","ImportDefinition","TypeDefinition","OperationDefinition","FieldDefinition","ParameterDefinition","InterfaceDefinition","RoleDefinition","UnionDefinition","EnumDefinition","EnumValueDefinition","DirectiveDefinition","Name","Primitive","Named","ListType","MapType","Optional","IntValue","FloatValue","StringValue","BooleanValue","EnumValue","ListValue","ObjectValue","ObjectField"];
 
-type PrimitiveType = "i8"|"u8"|"i16"|"u16"|"i32"|"u32"|"i64"|"u64"|"f32"|"f64"|"bool"|"string"|"datetime"|"bytes"|"raw"|"value";
-type Definition = (NamespaceDefinition|TypeDefinition|AliasDefinition|ImportDefinition|InterfaceDefinition|RoleDefinition|EnumDefinition|DirectiveDefinition);
-type LiteralValue = (IntValue|FloatValue|StringValue|BooleanValue|EnumValue|ListValue|ObjectValue);
-type TypeReference = (PrimitiveType|Named|ListType|MapType|Optional);
-type AstNode = (Value|Document|Annotation|Argument|DirectiveRequire|ImportName|AliasDefinition|ImportDefinition|TypeDefinition|OperationDefinition|FieldDefinition|ParameterDefinition|InterfaceDefinition|RoleDefinition|UnionDefinition|EnumDefinition|EnumValueDefinition|DirectiveDefinition|ListType|MapType|Optional|IntValue|FloatValue|StringValue|BooleanValue|EnumValue|ListValue|ObjectValue|ObjectField);
+export type PrimitiveType = "i8"|"u8"|"i16"|"u16"|"i32"|"u32"|"i64"|"u64"|"f32"|"f64"|"bool"|"string"|"datetime"|"bytes"|"raw"|"value";
+export type Definition = (NamespaceDefinition|TypeDefinition|AliasDefinition|ImportDefinition|InterfaceDefinition|RoleDefinition|EnumDefinition|DirectiveDefinition);
+export type LiteralValue = (IntValue|FloatValue|StringValue|BooleanValue|EnumValue|ListValue|ObjectValue);
+export type TypeReference = (PrimitiveType|Named|ListType|MapType|Optional);
+export type AstNode = (Value|Document|Annotation|Argument|DirectiveRequire|ImportName|AliasDefinition|ImportDefinition|TypeDefinition|OperationDefinition|FieldDefinition|ParameterDefinition|InterfaceDefinition|RoleDefinition|UnionDefinition|EnumDefinition|EnumValueDefinition|DirectiveDefinition|ListType|MapType|Optional|IntValue|FloatValue|StringValue|BooleanValue|EnumValue|ListValue|ObjectValue|ObjectField);
 
 
 export abstract class Node  {
@@ -311,6 +311,16 @@ export  class Name  extends Node {
     super("Name");
     this.kind = "Name";
     this.value = value;
+  }
+}
+  
+
+export  class Primitive  extends Node {
+  type: PrimitiveType;
+  constructor(type: PrimitiveType) {
+    super("Primitive");
+    this.kind = "Primitive";
+    this.type = type;
   }
 }
   

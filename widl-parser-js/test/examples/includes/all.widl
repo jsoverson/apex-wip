@@ -1,8 +1,0 @@
-
-type allOne {
-  some : i64
-}
-
-type allOne {
-  other : string
-}
