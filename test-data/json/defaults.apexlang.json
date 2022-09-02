@@ -1,0 +1,216 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "NamespaceDefinition",
+      "name": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "defaults"
+      },
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "Defaults"
+      },
+      "interfaces": [],
+      "annotations": [],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i8"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i8"
+            }
+          },
+          "default": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 0
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "bool"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "bool"
+            }
+          },
+          "default": {
+            "imported": false,
+            "kind": "BooleanValue",
+            "value": false
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "string"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "default": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Hi!"
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "map"
+          },
+          "type": {
+            "imported": false,
+            "kind": "MapType",
+            "keyType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            },
+            "valueType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "default": {
+            "imported": false,
+            "kind": "ObjectValue",
+            "fields": [
+              {
+                "imported": false,
+                "kind": "ObjectField",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "prop"
+                },
+                "value": {
+                  "imported": false,
+                  "kind": "StringValue",
+                  "value": "value"
+                }
+              }
+            ]
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "array"
+          },
+          "type": {
+            "imported": false,
+            "kind": "ListType",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "default": {
+            "imported": false,
+            "kind": "ListValue",
+            "value": [
+              {
+                "imported": false,
+                "kind": "StringValue",
+                "value": "hello"
+              },
+              {
+                "imported": false,
+                "kind": "StringValue",
+                "value": "world"
+              }
+            ]
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "richtype"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "any"
+            }
+          },
+          "default": {
+            "imported": false,
+            "kind": "EnumValue",
+            "value": "VALUE"
+          },
+          "annotations": []
+        }
+      ]
+    }
+  ]
+}

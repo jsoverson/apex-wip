@@ -1,0 +1,54 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "InterfaceDefinition",
+      "operations": [
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "sayHello"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": [],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "message"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "string"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": false
+        }
+      ],
+      "annotations": []
+    }
+  ]
+}

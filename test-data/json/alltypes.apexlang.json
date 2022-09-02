@@ -1,0 +1,520 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "NamespaceDefinition",
+      "name": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "example:widl"
+      },
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "InterfaceDefinition",
+      "operations": [
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "sayHello"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": [],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "message"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "string"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": false
+        }
+      ],
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "AllTypes"
+      },
+      "interfaces": [],
+      "annotations": [],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i8"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i8"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u8"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u8"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i16"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i16"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u16"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u16"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i32"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i32"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u32"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u32"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i64"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i64"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u64"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u64"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "f32"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "f32"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "f64"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "f64"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "bool"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "bool"
+            }
+          },
+          "default": {
+            "imported": false,
+            "kind": "BooleanValue",
+            "value": false
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "string"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "datetime"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "datetime"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "bytes"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "bytes"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "raw"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "raw"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "value"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "optional"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "bool"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "map"
+          },
+          "type": {
+            "imported": false,
+            "kind": "MapType",
+            "keyType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            },
+            "valueType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "array"
+          },
+          "type": {
+            "imported": false,
+            "kind": "ListType",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "richtype"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "OtherType"
+            }
+          },
+          "default": {
+            "imported": false,
+            "kind": "EnumValue",
+            "value": "ID"
+          },
+          "annotations": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "OtherType"
+      },
+      "interfaces": [],
+      "annotations": [],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "data"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u8"
+            }
+          },
+          "annotations": []
+        }
+      ]
+    }
+  ]
+}

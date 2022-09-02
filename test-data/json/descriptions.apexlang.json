@@ -1,0 +1,158 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "NamespaceDefinition",
+      "description": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "Namespace description"
+      },
+      "name": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "example:widl"
+      },
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "InterfaceDefinition",
+      "description": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "Interface description"
+      },
+      "operations": [
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "sayHello"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Operation description"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": [],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "message"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "string"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": false
+        }
+      ],
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "AllTypes"
+      },
+      "description": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "Type description"
+      },
+      "interfaces": [],
+      "annotations": [],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i8"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Field description"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i8"
+            }
+          },
+          "annotations": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "EnumDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "EnumType"
+      },
+      "description": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "Enum description"
+      },
+      "annotations": [],
+      "values": [
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "This"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 0
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Variant description"
+          },
+          "annotations": []
+        }
+      ]
+    }
+  ]
+}

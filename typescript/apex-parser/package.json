@@ -1,0 +1,48 @@
+{
+  "name": "apex-parser",
+  "description": "",
+  "author": "",
+  "version": "0.0.0",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "codegen": "bin/peggy.js > src/generated/generated.js",
+    "build": "tsc --declaration",
+    "compile": "npm run clean && npm run build",
+    "clean": "rimraf dist && rimraf generated/*",
+    "lint": "eslint src test",
+    "prepublishOnly": "npm run compile",
+    "format": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
+    "watch": "npm run clean && tsc -w --declaration",
+    "test:unit": "mocha",
+    "test": "npm run lint && npm run test:unit"
+  },
+  "mocha": {
+    "extends": "../.config/.mocharc.json"
+  },
+  "prettier": "../.config/.prettierrc.json",
+  "eslintConfig": {
+    "extends": "../.config/.eslintrc.json"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/find-root": "^1.1.2",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.23.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "peggy": "^2.0.1",
+    "apex-ast": "workspace:*"
+  }
+}

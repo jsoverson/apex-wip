@@ -1,0 +1,63 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "ImportDefinition",
+      "all": true,
+      "names": [],
+      "from": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "@test/test/test"
+      },
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "ImportDefinition",
+      "all": false,
+      "names": [
+        {
+          "imported": false,
+          "kind": "ImportName",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "Blah"
+          }
+        },
+        {
+          "imported": false,
+          "kind": "ImportName",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "Blah"
+          }
+        },
+        {
+          "imported": false,
+          "kind": "ImportName",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "Blah"
+          },
+          "alias": {
+            "imported": false,
+            "kind": "Name",
+            "value": "Test"
+          }
+        }
+      ],
+      "from": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "@test/test/test"
+      },
+      "annotations": []
+    }
+  ]
+}

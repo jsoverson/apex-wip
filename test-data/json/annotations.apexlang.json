@@ -1,0 +1,397 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "NamespaceDefinition",
+      "name": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "mandelbrot"
+      },
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "ns"
+          },
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "InterfaceDefinition",
+      "operations": [
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "update"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "operation"
+          },
+          "type": {
+            "imported": false,
+            "kind": "ListType",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "u16"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "returnval"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "width"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u32"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "arg"
+                  },
+                  "arguments": []
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "height"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u32"
+                }
+              },
+              "annotations": []
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "limit"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u32"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": false
+        }
+      ],
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "iface"
+          },
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "EnumDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "SDAF"
+      },
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "enum"
+          },
+          "arguments": []
+        }
+      ],
+      "values": [
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "FOO"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 1
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "bar"
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "enumval"
+              },
+              "arguments": []
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "BAR"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 2
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "enumval"
+              },
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "Test"
+      },
+      "interfaces": [],
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "type"
+          },
+          "arguments": []
+        }
+      ],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "foo"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "typefield"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 1234
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "length"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 5
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "response"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "status"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "EnumValue",
+                    "value": "CREATED"
+                  }
+                },
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "examples"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "ObjectValue",
+                    "fields": [
+                      {
+                        "imported": false,
+                        "kind": "ObjectField",
+                        "name": {
+                          "imported": false,
+                          "kind": "Name",
+                          "value": "application/json"
+                        },
+                        "value": {
+                          "imported": false,
+                          "kind": "StringValue",
+                          "value": "json"
+                        }
+                      },
+                      {
+                        "imported": false,
+                        "kind": "ObjectField",
+                        "name": {
+                          "imported": false,
+                          "kind": "Name",
+                          "value": "csv"
+                        },
+                        "value": {
+                          "imported": false,
+                          "kind": "StringValue",
+                          "value": "csv"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

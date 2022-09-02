@@ -1,0 +1,265 @@
+ namespace "apexlang-ast"
+
+ enum PrimitiveType {
+  i8 = 0
+  u8 = 1
+  i16 = 2
+  u16 = 3
+  i32 = 4
+  u32 = 5
+  i64 = 6
+  u64 = 7
+  f32 = 8
+  f64 = 9
+  bool = 10
+  string = 11
+  datetime = 12
+  bytes = 13
+  raw = 14
+  value = 15
+  any = 16
+}
+
+union Definition = NamespaceDefinition | TypeDefinition | AliasDefinition | ImportDefinition | InterfaceDefinition | RoleDefinition | EnumDefinition | DirectiveDefinition
+
+union Value = IntValue | FloatValue | StringValue | BooleanValue | EnumValue | ListValue | ObjectValue
+
+union TypeReference = PrimitiveType | Named | ListType | MapType | Optional
+
+union AstNode = Value | ApexDocument | Annotation | Argument | DirectiveRequire | ImportName | AliasDefinition | ImportDefinition | TypeDefinition | OperationDefinition | FieldDefinition | ParameterDefinition | InterfaceDefinition | RoleDefinition | UnionDefinition | EnumDefinition | EnumValueDefinition | DirectiveDefinition | ListType | MapType | Optional | IntValue | FloatValue | StringValue | BooleanValue | EnumValue | ListValue | ObjectValue | ObjectField
+
+type ApexDocument {
+  kind: string = "ApexDocument"
+  imported: bool = false
+  definitions: [Definition]
+}
+
+type Annotation {
+  kind: string = "Annotation"
+  imported: bool = false
+  name: Name
+  arguments: [Argument]?
+}
+
+type Argument {
+  kind: string = "Argument"
+  imported: bool = false
+  name: Name
+  value: Value
+}
+
+type DirectiveRequire {
+  kind: string = "DirectiveRequire"
+  imported: bool = false
+  directive: Name
+}
+
+type ImportName {
+  kind: string = "ImportName"
+  imported: bool = false
+  name: Name
+  alias: Name?
+}
+
+type NamespaceDefinition {
+  kind: string = "NamespaceDefinition"
+  imported: bool = false
+  name: StringValue
+  description: StringValue?
+  annotations: [Annotation] = []
+}
+
+type AliasDefinition {
+  kind: string = "AliasDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  type: TypeReference
+  annotations: [Annotation] = []
+}
+
+type ImportDefinition {
+  kind: string = "ImportDefinition"
+  imported: bool = false
+  description: StringValue?
+  all: bool
+  names: [ImportName]
+  from: StringValue
+  annotations: [Annotation] = []
+}
+
+type TypeDefinition {
+  kind: string = "TypeDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  interfaces: [Named]?
+  fields: [FieldDefinition]
+  annotations: [Annotation] = []
+}
+
+type OperationDefinition {
+  kind: string = "OperationDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  parameters: [ParameterDefinition]
+  type: TypeReference
+  unary: bool
+  annotations: [Annotation] = []
+}
+
+type FieldDefinition {
+  kind: string = "FieldDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  type: TypeReference
+  default: Value?
+  annotations: [Annotation] = []
+}
+
+type ParameterDefinition {
+  kind: string = "ParameterDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  type: TypeReference
+  default: Value?
+  annotations: [Annotation] = []
+}
+
+type InterfaceDefinition {
+  kind: string = "InterfaceDefinition"
+  imported: bool = false
+  description: StringValue?
+  operations: [OperationDefinition]
+  annotations: [Annotation] = []
+}
+
+type RoleDefinition {
+  kind: string = "RoleDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  operations: [OperationDefinition]
+  annotations: [Annotation] = []
+}
+
+type UnionDefinition {
+  kind: string = "UnionDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  types: [Named]
+  annotations: [Annotation] = []
+}
+
+type EnumDefinition {
+  kind: string = "EnumDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  values: [EnumValueDefinition]
+  annotations: [Annotation] = []
+}
+
+type EnumValueDefinition {
+  kind: string = "EnumValueDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  index: IntValue
+  display: StringValue?
+  annotations: [Annotation] = []
+}
+
+type DirectiveDefinition {
+  kind: string = "DirectiveDefinition"
+  imported: bool = false
+  name: Name
+  description: StringValue?
+  parameters: [ParameterDefinition]
+  locations: [Name]
+  requires: [DirectiveRequire]
+}
+
+type Name {
+  kind: string = "Name"
+  imported: bool = false
+  value: string
+}
+
+type Named {
+  kind: string = "Named"
+  imported: bool = false
+  name: Name
+}
+
+type ListType {
+  kind: string = "ListType"
+  imported: bool = false
+  type: TypeReference
+}
+
+type MapType {
+  kind: string = "MapType"
+  imported: bool = false
+  keyType: TypeReference
+  valueType: TypeReference
+}
+
+type Optional {
+  kind: string = "Optional"
+  imported: bool = false
+  type: TypeReference
+}
+
+type IntValue {
+  kind: string = "IntValue"
+  imported: bool = false
+  value: u64
+}
+
+type FloatValue {
+  kind: string = "FloatValue"
+  imported: bool = false
+  value: f64
+}
+
+type StringValue {
+  kind: string = "StringValue"
+  imported: bool = false
+  value: string
+}
+
+type BooleanValue {
+  kind: string = "BooleanValue"
+  imported: bool = false
+  value: bool
+}
+
+type EnumValue {
+  kind: string = "EnumValue"
+  imported: bool = false
+  value: string
+}
+
+type ListValue {
+  kind: string = "ListValue"
+  imported: bool = false
+  value: [Value]
+}
+
+type ObjectValue  {
+  kind: string = "ObjectValue"
+  imported: bool = false
+  fields: [ObjectField]
+}
+
+type ObjectField {
+  kind: string = "ObjectField"
+  imported: bool = false
+  name: Name
+  value: Value
+}

@@ -1,0 +1,135 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "NamespaceDefinition",
+      "name": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "test:enums"
+      },
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "EnumDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "One"
+      },
+      "annotations": [],
+      "values": [
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "FOO"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 1
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Foo"
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "BAR"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 2
+          },
+          "annotations": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "EnumDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "Two"
+      },
+      "annotations": [],
+      "values": [
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "first"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 0
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "First"
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "second"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 1
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Second"
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "third"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 2
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Third"
+          },
+          "annotations": []
+        }
+      ]
+    }
+  ]
+}

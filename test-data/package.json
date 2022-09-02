@@ -1,0 +1,14 @@
+{
+  "name": "test-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serialize": "./scripts/serialize.js apexlang json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apexlang/core": "^0.0.26"
+  }
+}

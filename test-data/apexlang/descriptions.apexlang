@@ -1,0 +1,20 @@
+"Namespace description"
+namespace "example:widl"
+
+"Interface description"
+interface {
+  "Operation description"
+  sayHello(message:string): string
+}
+
+"Type description"
+type AllTypes {
+  "Field description"
+  i8: i8
+}
+
+"Enum description"
+enum EnumType {
+  "Variant description"
+  This = 0
+}

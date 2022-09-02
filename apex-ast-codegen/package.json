@@ -1,0 +1,57 @@
+{
+  "name": "@apexlang/apex-spec",
+  "version": "0.0.1",
+  "description": "JSON Schema generator",
+  "keywords": [
+    "apex",
+    "codegen"
+  ],
+  "engines": {
+    "node": ">=8.5"
+  },
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "browser": "./dist/esm/index.js",
+  "exports": {
+    ".": "./dist/esm/index.js"
+  },
+  "eslintConfig": {
+    "extends": "./config/.eslintrc.json"
+  },
+  "files": [
+    "templates",
+    "dist",
+    "README.md",
+    "test",
+    "src",
+    "docs",
+    "definitions",
+    "templates"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "npm run build:esm ",
+    "build:esm": "tsc --module es2015 --outDir dist/esm",
+    "watch": "tsc -w",
+    "clean": "shx rm -rf dist",
+    "test": "npm run lint",
+    "lint": "eslint -c ./config/.eslintrc.json src --ext .ts",
+    "prerelease": "npm run build",
+    "release": "standard-version",
+    "release:github": "git push --no-verify --follow-tags origin master"
+  },
+  "dependencies": {
+    "@apexlang/core": "^0.0.27"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "^8.23.0",
+    "prettier": "^2.7.1",
+    "shx": "0.3.4",
+    "typescript": "^4.8.2"
+  }
+}

@@ -1,0 +1,3 @@
+packages:
+  - "apex-ast"
+  - "apex-parser"

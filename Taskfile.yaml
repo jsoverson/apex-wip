@@ -1,0 +1,44 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+
+tasks:
+  gen:ast:
+    dir: ./apex-ast-codegen
+    cmds:
+      - apex generate apex.yaml
+    silent: true
+  gen:testdata:
+    dir: ./test-data
+    cmds:
+      - npm install
+      - npm run serialize
+  test:
+    deps: [ts:test]
+  ts:codegen:
+    deps: [gen:ast]
+    cmds:
+      - cp apex-ast-codegen/generated/typescript.ts ./typescript/apex-ast/src/generated.ts
+      - task: ts:compile:ast
+      - task: ts:codegen:parser
+  ts:compile:ast:
+    deps: [ts:deps]
+    dir: ./typescript/apex-ast
+    cmds:
+      - npm run build
+  ts:codegen:parser:
+    deps: [ts:deps]
+    dir: ./typescript/apex-parser
+    cmds:
+      - npm run codegen
+  ts:deps:
+    dir: ./typescript/
+    cmds:
+      - pnpm install
+  ts:test:
+    dir: ./typescript
+    deps: [gen:testdata, ts:codegen]
+    cmds:
+      - pnpm recursive test

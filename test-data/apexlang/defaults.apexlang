@@ -1,0 +1,11 @@
+namespace "defaults"
+
+
+type Defaults {
+  i8: i8 = 0
+  bool: bool = false
+  string: string = "Hi!"
+  map: {string:string} = {prop: "value"}
+  array: [string] = ["hello", "world"]
+  richtype: any = VALUE
+}

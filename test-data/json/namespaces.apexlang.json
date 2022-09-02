@@ -1,0 +1,16 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "NamespaceDefinition",
+      "name": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "example:widl"
+      },
+      "annotations": []
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+spec: apexlang.apexlang
+generates:
+  ./generated/typescript.ts:
+    module: ./src/index.ts
+    visitorClass: TypeScriptVisitor

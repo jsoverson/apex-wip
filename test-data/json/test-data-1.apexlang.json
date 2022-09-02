@@ -1,0 +1,6103 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "ImportDefinition",
+      "all": true,
+      "names": [],
+      "from": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "@apexlang/core"
+      },
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "ImportDefinition",
+      "all": true,
+      "names": [],
+      "from": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "@apexlang/rest"
+      },
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "ImportDefinition",
+      "all": true,
+      "names": [],
+      "from": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "@apexlang/openapi"
+      },
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "NamespaceDefinition",
+      "name": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "apex.testing"
+      },
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "info"
+          },
+          "arguments": [
+            {
+              "imported": false,
+              "kind": "Argument",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "title"
+              },
+              "value": {
+                "imported": false,
+                "kind": "StringValue",
+                "value": "Test Output API"
+              }
+            },
+            {
+              "imported": false,
+              "kind": "Argument",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "description"
+              },
+              "value": {
+                "imported": false,
+                "kind": "StringValue",
+                "value": "Apex spec used to test the output of code generators."
+              }
+            },
+            {
+              "imported": false,
+              "kind": "Argument",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "version"
+              },
+              "value": {
+                "imported": false,
+                "kind": "StringValue",
+                "value": "1.0.0"
+              }
+            },
+            {
+              "imported": false,
+              "kind": "Argument",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "termsOfService"
+              },
+              "value": {
+                "imported": false,
+                "kind": "StringValue",
+                "value": "https://api.goodcorp.com/terms/"
+              }
+            },
+            {
+              "imported": false,
+              "kind": "Argument",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "contact"
+              },
+              "value": {
+                "imported": false,
+                "kind": "ObjectValue",
+                "fields": [
+                  {
+                    "imported": false,
+                    "kind": "ObjectField",
+                    "name": {
+                      "imported": false,
+                      "kind": "Name",
+                      "value": "name"
+                    },
+                    "value": {
+                      "imported": false,
+                      "kind": "StringValue",
+                      "value": "API Support"
+                    }
+                  },
+                  {
+                    "imported": false,
+                    "kind": "ObjectField",
+                    "name": {
+                      "imported": false,
+                      "kind": "Name",
+                      "value": "url"
+                    },
+                    "value": {
+                      "imported": false,
+                      "kind": "StringValue",
+                      "value": "https://api.goodcorp.com/support"
+                    }
+                  },
+                  {
+                    "imported": false,
+                    "kind": "ObjectField",
+                    "name": {
+                      "imported": false,
+                      "kind": "Name",
+                      "value": "email"
+                    },
+                    "value": {
+                      "imported": false,
+                      "kind": "StringValue",
+                      "value": "api@goodcorp.com"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "imported": false,
+              "kind": "Argument",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "license"
+              },
+              "value": {
+                "imported": false,
+                "kind": "ObjectValue",
+                "fields": [
+                  {
+                    "imported": false,
+                    "kind": "ObjectField",
+                    "name": {
+                      "imported": false,
+                      "kind": "Name",
+                      "value": "name"
+                    },
+                    "value": {
+                      "imported": false,
+                      "kind": "StringValue",
+                      "value": "Apache 2.0"
+                    }
+                  },
+                  {
+                    "imported": false,
+                    "kind": "ObjectField",
+                    "name": {
+                      "imported": false,
+                      "kind": "Name",
+                      "value": "url"
+                    },
+                    "value": {
+                      "imported": false,
+                      "kind": "StringValue",
+                      "value": "https://www.apache.org/licenses/LICENSE-2.0"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "server"
+          },
+          "arguments": [
+            {
+              "imported": false,
+              "kind": "Argument",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "url"
+              },
+              "value": {
+                "imported": false,
+                "kind": "StringValue",
+                "value": "https://api.goodcorp.com"
+              }
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "path"
+          },
+          "arguments": [
+            {
+              "imported": false,
+              "kind": "Argument",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "value": {
+                "imported": false,
+                "kind": "StringValue",
+                "value": "/v1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "RoleDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "MyService"
+      },
+      "operations": [
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "emptyVoid"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "void"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "GET"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryType"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "MyType"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryType"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "MyType"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryEnum"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "MyEnum"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryEnum"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "MyEnum"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryAlias"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "UUID"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryAlias"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "UUID"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryString"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryString"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "string"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryI64"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i64"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryI64"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "i64"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryI32"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i32"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryI32"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "i32"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryI16"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i16"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryI16"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "i16"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryI8"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i8"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryI8"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "i8"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryU64"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u64"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryU64"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u64"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryU32"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u32"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryU32"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u32"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryU16"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u16"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryU16"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u16"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryU8"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u8"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryU8"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u8"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryF64"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "f64"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryF64"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "f64"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryF32"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "f32"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryF32"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "f32"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unaryBytes"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "bytes"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/unaryBytes"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "bytes"
+                }
+              },
+              "annotations": []
+            }
+          ],
+          "unary": true
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcType"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "MyType"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcType"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "MyType"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "MyType"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcEnum"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "MyEnum"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcEnum"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "MyEnum"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "MyEnum"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcAlias"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "UUID"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcEnum"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "UUID"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "UUID"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcString"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcString"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "string"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "string"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcI64"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i64"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcI64"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "i64"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "i64"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcI32"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i32"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcI32"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "i32"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "i32"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcI16"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i16"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcI16"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "i16"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "i16"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcI8"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i8"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcI8"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "i8"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "i8"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcU64"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u64"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcU64"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u64"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "u64"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcU32"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u32"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcU32"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u32"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "u32"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcU16"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u16"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcU16"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u16"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "u16"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcU8"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u8"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcU8"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "u8"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "u8"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcF64"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "f64"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcF64"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "f64"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "f64"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcF32"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "f32"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcF32"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "f32"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "f32"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        },
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "funcBytes"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "bytes"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "path"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "/funcBytes"
+                  }
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "POST"
+              },
+              "arguments": []
+            }
+          ],
+          "parameters": [
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "bytes"
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "imported": false,
+              "kind": "ParameterDefinition",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "optional"
+              },
+              "type": {
+                "imported": false,
+                "kind": "Optional",
+                "type": {
+                  "imported": false,
+                  "kind": "Named",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "bytes"
+                  }
+                }
+              },
+              "annotations": [
+                {
+                  "imported": false,
+                  "kind": "Annotation",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "n"
+                  },
+                  "arguments": [
+                    {
+                      "imported": false,
+                      "kind": "Argument",
+                      "name": {
+                        "imported": false,
+                        "kind": "Name",
+                        "value": "value"
+                      },
+                      "value": {
+                        "imported": false,
+                        "kind": "IntValue",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unary": false
+        }
+      ],
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "service"
+          },
+          "arguments": []
+        },
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "uses"
+          },
+          "arguments": [
+            {
+              "imported": false,
+              "kind": "Argument",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "value"
+              },
+              "value": {
+                "imported": false,
+                "kind": "ListValue",
+                "value": [
+                  {
+                    "imported": false,
+                    "kind": "StringValue",
+                    "value": "Repository"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "RoleDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "Repository"
+      },
+      "operations": [
+        {
+          "imported": false,
+          "kind": "OperationDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "getData"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "MyType"
+            }
+          },
+          "annotations": [],
+          "parameters": [],
+          "unary": false
+        }
+      ],
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "dependency"
+          },
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "UnionDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "MyUnion"
+      },
+      "annotations": [],
+      "types": [
+        {
+          "imported": false,
+          "kind": "Named",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "MyType"
+          }
+        },
+        {
+          "imported": false,
+          "kind": "Named",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "MyEnum"
+          }
+        },
+        {
+          "imported": false,
+          "kind": "Named",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "string"
+          }
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "AliasDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "UUID"
+      },
+      "type": {
+        "imported": false,
+        "kind": "Named",
+        "name": {
+          "imported": false,
+          "kind": "Name",
+          "value": "string"
+        }
+      },
+      "annotations": []
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "MyType"
+      },
+      "description": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "MyType is a class"
+      },
+      "interfaces": [],
+      "annotations": [],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "sameValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "same type value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "MyType"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "typeValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "type value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "MyOtherType"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 2
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "stringValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "string value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 3
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "stringOption"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "string option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 4
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i64Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "i64 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i64"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 5
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i64Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "i64 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "i64"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 6
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i32Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "i32 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i32"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 7
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i32Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "i32 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "i32"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 8
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i16Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "i16 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i16"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 9
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i16Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "i16 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "i16"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 10
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i8Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "i8 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i8"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 11
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i8Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "i8 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "i8"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 12
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u64Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "u64 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u64"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 13
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u64Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "u64 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "u64"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 14
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u32Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "u32 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u32"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 15
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u32Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "u32 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "u32"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 16
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u16Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "u16 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u16"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 17
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u16Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "u16 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "u16"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 18
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u8Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "u8 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "u8"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 19
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "u8Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "u8 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "u8"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 20
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "f64Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "f64 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "f64"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 21
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "f64Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "f64 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "f64"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 22
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "f32Value"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "f32 value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "f32"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 23
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "f32Option"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "f32 option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "f32"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 24
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "datetimeValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "datetime value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "datetime"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 25
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "datetimeOption"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "datetime option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "datetime"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 26
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "bytesValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "bytes value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "bytes"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 27
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "bytesOption"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "bytes option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "bytes"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 28
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "mapValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "map value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "MapType",
+            "keyType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            },
+            "valueType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "i64"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 29
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "mapOfTypes"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "map of types"
+          },
+          "type": {
+            "imported": false,
+            "kind": "MapType",
+            "keyType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            },
+            "valueType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "MyType"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 30
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "arrayValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "array value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "ListType",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 31
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "arrayOfTypes"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "array of types"
+          },
+          "type": {
+            "imported": false,
+            "kind": "ListType",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "MyType"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 32
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unionValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "union value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "MyUnion"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 33
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "unionOption"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "union option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "MyUnion"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 34
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "enumValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "enum value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "MyEnum"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 35
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "enumOption"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "enum option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "MyEnum"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 36
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "aliasValue"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "enum value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "UUID"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 37
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "aliasOption"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "enum option"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "UUID"
+              }
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 38
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "MyOtherType"
+      },
+      "interfaces": [],
+      "annotations": [],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "foo"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "bar"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": [
+            {
+              "imported": false,
+              "kind": "Annotation",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "n"
+              },
+              "arguments": [
+                {
+                  "imported": false,
+                  "kind": "Argument",
+                  "name": {
+                    "imported": false,
+                    "kind": "Name",
+                    "value": "value"
+                  },
+                  "value": {
+                    "imported": false,
+                    "kind": "IntValue",
+                    "value": 2
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "EnumDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "MyEnum"
+      },
+      "description": {
+        "imported": false,
+        "kind": "StringValue",
+        "value": "MyEnum is an emuneration"
+      },
+      "annotations": [],
+      "values": [
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "ONE"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 0
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "one"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "ONE value"
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "TWO"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 1
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "TWO value"
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "THREE"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 2
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "three"
+          },
+          "description": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "THREE value"
+          },
+          "annotations": []
+        }
+      ]
+    }
+  ]
+}

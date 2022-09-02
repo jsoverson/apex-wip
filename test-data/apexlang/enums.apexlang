@@ -1,0 +1,12 @@
+namespace "test:enums"
+
+enum One {
+  FOO = 1 as "Foo"
+  BAR = 2
+}
+
+enum Two {
+  first = 0 as "First"
+  second = 1 as "Second"
+  third = 2 as "Third"
+}

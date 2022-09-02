@@ -1,0 +1,66 @@
+{
+  "Node": ["kind"],
+  "Value": ["value"],
+  "Document": ["definitions"],
+  "Annotation": ["name", "arguments"],
+  "Argument": ["name", "value"],
+  "DirectiveRequire": ["directive", "locations"],
+  "ImportName": ["name", "alias"],
+  "NamespaceDefinition": ["name", "description", "annotations"],
+  "AliasDefinition": ["name", "type", "description", "annotations"],
+  "ImportDefinition": ["all", "names", "from", "description", "annotations"],
+  "TypeDefinition": [
+    "name",
+    "fields",
+    "interfaces",
+    "description",
+    "annotations"
+  ],
+  "OperationDefinition": [
+    "name",
+    "parameters",
+    "type",
+    "unary",
+    "description",
+    "annotations"
+  ],
+  "FieldDefinition": ["name", "type", "default", "description", "annotations"],
+  "ParameterDefinition": [
+    "name",
+    "type",
+    "default",
+    "description",
+    "annotations"
+  ],
+  "InterfaceDefinition": ["operations", "description", "annotations"],
+  "RoleDefinition": ["name", "operations", "description", "annotations"],
+  "UnionDefinition": ["name", "types", "description", "annotations"],
+  "EnumDefinition": ["name", "values", "description", "annotations"],
+  "EnumValueDefinition": [
+    "name",
+    "index",
+    "display",
+    "description",
+    "annotations"
+  ],
+  "DirectiveDefinition": [
+    "name",
+    "parameters",
+    "locations",
+    "requires",
+    "description"
+  ],
+  "Name": ["value"],
+  "Named": ["name"],
+  "ListType": ["type"],
+  "MapType": ["keytype", "valuetype"],
+  "Optional": ["type"],
+  "IntValue": ["value"],
+  "FloatValue": ["value"],
+  "StringValue": ["value"],
+  "BooleanValue": ["value"],
+  "EnumValue": ["value"],
+  "ListValue": ["value"],
+  "ObjectValue": ["fields"],
+  "ObjectField": ["name", "value"]
+}
