@@ -1,0 +1,1068 @@
+{
+  "imported": false,
+  "kind": "ApexDocument",
+  "definitions": [
+    {
+      "imported": false,
+      "kind": "DirectiveDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "info"
+      },
+      "parameters": [
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "title"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "description"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "termsOfService"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "contact"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "Contact"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "license"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "License"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "version"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        }
+      ],
+      "locations": [
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "NAMESPACE"
+        }
+      ],
+      "requires": []
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "Contact"
+      },
+      "interfaces": [],
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "novisit"
+          },
+          "arguments": []
+        }
+      ],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "name"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "url"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "email"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "License"
+      },
+      "interfaces": [],
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "novisit"
+          },
+          "arguments": []
+        }
+      ],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "name"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "url"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "DirectiveDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "host"
+      },
+      "parameters": [
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        }
+      ],
+      "locations": [
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "NAMESPACE"
+        }
+      ],
+      "requires": []
+    },
+    {
+      "imported": false,
+      "kind": "DirectiveDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "schemes"
+      },
+      "parameters": [
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "ListType",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        }
+      ],
+      "locations": [
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "NAMESPACE"
+        }
+      ],
+      "requires": []
+    },
+    {
+      "imported": false,
+      "kind": "DirectiveDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "consumes"
+      },
+      "parameters": [
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "ListType",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        }
+      ],
+      "locations": [
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "NAMESPACE"
+        }
+      ],
+      "requires": []
+    },
+    {
+      "imported": false,
+      "kind": "DirectiveDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "produces"
+      },
+      "parameters": [
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "value"
+          },
+          "type": {
+            "imported": false,
+            "kind": "ListType",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        }
+      ],
+      "locations": [
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "NAMESPACE"
+        }
+      ],
+      "requires": []
+    },
+    {
+      "imported": false,
+      "kind": "DirectiveDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "server"
+      },
+      "parameters": [
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "url"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "description"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "variables"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "MapType",
+              "keyType": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "string"
+                }
+              },
+              "valueType": {
+                "imported": false,
+                "kind": "Named",
+                "name": {
+                  "imported": false,
+                  "kind": "Name",
+                  "value": "ServerVariableObject"
+                }
+              }
+            }
+          },
+          "annotations": []
+        }
+      ],
+      "locations": [
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "NAMESPACE"
+        }
+      ],
+      "requires": []
+    },
+    {
+      "imported": false,
+      "kind": "TypeDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "ServerVariableObject"
+      },
+      "interfaces": [],
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "novisit"
+          },
+          "arguments": []
+        }
+      ],
+      "fields": [
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "enum"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "ServerVariableObjectEnum"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "default"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "ServerVariableObjectVal"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "FieldDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "description"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "UnionDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "ServerVariableObjectEnum"
+      },
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "novisit"
+          },
+          "arguments": []
+        }
+      ],
+      "types": [
+        {
+          "imported": false,
+          "kind": "ListType",
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          }
+        },
+        {
+          "imported": false,
+          "kind": "ListType",
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "bool"
+            }
+          }
+        },
+        {
+          "imported": false,
+          "kind": "ListType",
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "i64"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "UnionDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "ServerVariableObjectVal"
+      },
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "novisit"
+          },
+          "arguments": []
+        }
+      ],
+      "types": [
+        {
+          "imported": false,
+          "kind": "Named",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "string"
+          }
+        },
+        {
+          "imported": false,
+          "kind": "Named",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "bool"
+          }
+        },
+        {
+          "imported": false,
+          "kind": "Named",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "i64"
+          }
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "DirectiveDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "password"
+      },
+      "parameters": [],
+      "locations": [
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "PARAMETER"
+        },
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "FIELD"
+        }
+      ],
+      "requires": []
+    },
+    {
+      "imported": false,
+      "kind": "DirectiveDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "response"
+      },
+      "parameters": [
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "description"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "string"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "status"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Named",
+            "name": {
+              "imported": false,
+              "kind": "Name",
+              "value": "StatusCode"
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "returns"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "examples"
+          },
+          "type": {
+            "imported": false,
+            "kind": "MapType",
+            "keyType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            },
+            "valueType": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        }
+      ],
+      "locations": [
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "OPERATION"
+        }
+      ],
+      "requires": []
+    },
+    {
+      "imported": false,
+      "kind": "EnumDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "StatusCode"
+      },
+      "annotations": [
+        {
+          "imported": false,
+          "kind": "Annotation",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "novisit"
+          },
+          "arguments": []
+        }
+      ],
+      "values": [
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "OK"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 200
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "OK"
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "CREATED"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 201
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Created"
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "NOT_FOUND"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 400
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Not Found"
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "EnumValueDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "DEFAULT"
+          },
+          "index": {
+            "imported": false,
+            "kind": "IntValue",
+            "value": 999
+          },
+          "display": {
+            "imported": false,
+            "kind": "StringValue",
+            "value": "Default"
+          },
+          "annotations": []
+        }
+      ]
+    },
+    {
+      "imported": false,
+      "kind": "DirectiveDefinition",
+      "name": {
+        "imported": false,
+        "kind": "Name",
+        "value": "externalDocs"
+      },
+      "parameters": [
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "description"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        },
+        {
+          "imported": false,
+          "kind": "ParameterDefinition",
+          "name": {
+            "imported": false,
+            "kind": "Name",
+            "value": "url"
+          },
+          "type": {
+            "imported": false,
+            "kind": "Optional",
+            "type": {
+              "imported": false,
+              "kind": "Named",
+              "name": {
+                "imported": false,
+                "kind": "Name",
+                "value": "string"
+              }
+            }
+          },
+          "annotations": []
+        }
+      ],
+      "locations": [
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "NAMESPACE"
+        },
+        {
+          "imported": false,
+          "kind": "Name",
+          "value": "OPERATION"
+        }
+      ],
+      "requires": []
+    }
+  ]
+}

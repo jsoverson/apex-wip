@@ -2,8 +2,6 @@
 
 version: "3"
 
-vars:
-
 tasks:
   gen:ast:
     dir: ./apex-ast-codegen

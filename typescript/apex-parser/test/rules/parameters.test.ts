@@ -12,13 +12,7 @@ describe(rule, function () {
   it('should parse basic parameters', () => {
     const tree = parser.parse(`this : string`);
     expect(tree).to.deep.equal(
-      new ast.ParameterDefinition(
-        new ast.Name('this'),
-        new ast.Named(new ast.Name('string')),
-        undefined,
-        undefined,
-        [],
-      ),
+      new ast.ParameterDefinition(new ast.Name('this'), new ast.Named(new ast.Name('string'))),
     );
   });
   it('should parse param with annotation', () => {

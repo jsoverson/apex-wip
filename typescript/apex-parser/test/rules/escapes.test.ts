@@ -1,5 +1,4 @@
 import { expect } from 'chai';
-import { ast } from 'apex-ast';
 import { describe } from 'mocha';
 
 import { genParser } from '../utils/gen-parser';

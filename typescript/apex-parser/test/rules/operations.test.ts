@@ -12,14 +12,7 @@ describe(rule, function () {
   it('should parse an operation with no params', () => {
     const tree = parser.parse(`opName():any`);
     expect(tree).to.deep.equal(
-      new ast.OperationDefinition(
-        new ast.Name('opName'),
-        [],
-        new ast.Named(new ast.Name('any')),
-        false,
-        undefined,
-        undefined,
-      ),
+      new ast.OperationDefinition(new ast.Name('opName'), [], new ast.Named(new ast.Name('any')), false),
     );
   });
 
@@ -28,19 +21,9 @@ describe(rule, function () {
     expect(tree).to.deep.equal(
       new ast.OperationDefinition(
         new ast.Name('opName'),
-        [
-          new ast.ParameterDefinition(
-            new ast.Name('msg'),
-            new ast.Named(new ast.Name('string')),
-            undefined,
-            undefined,
-            [],
-          ),
-        ],
+        [new ast.ParameterDefinition(new ast.Name('msg'), new ast.Named(new ast.Name('string')))],
         new ast.Named(new ast.Name('string')),
         false,
-        undefined,
-        [],
       ),
     );
   });

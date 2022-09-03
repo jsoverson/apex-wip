@@ -4,6 +4,7 @@
   "Document": ["definitions"],
   "Annotation": ["name", "arguments"],
   "Argument": ["name", "value"],
+  "DirectiveDefinition": ["name", "parameters", "description", "requires"],
   "DirectiveRequire": ["directive", "locations"],
   "ImportName": ["name", "alias"],
   "NamespaceDefinition": ["name", "description", "annotations"],

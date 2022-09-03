@@ -18,6 +18,6 @@ describe(rule, function () {
 
   it('should parse an interface with a description', () => {
     const tree = parser.parse(`"desc" interface {}`);
-    expect(tree).to.deep.equal(new ast.InterfaceDefinition([], new ast.StringValue('desc'), []));
+    expect(tree).to.deep.equal(new ast.InterfaceDefinition([], new ast.StringValue('desc')));
   });
 });

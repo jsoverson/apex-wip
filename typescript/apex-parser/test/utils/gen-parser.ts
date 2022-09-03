@@ -16,6 +16,7 @@ export function genParser(startRules = ['APEX'], trace = false): peggy.Parser {
   // Need to dynamically load module because we
   // require the local project's AST dependency.
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const mod = new Module(startRules.join('-'), module) as any;
   mod.paths = module.paths;
   mod._compile(source, ''); // eslint-disable-line

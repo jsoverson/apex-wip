@@ -1,8 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const parser = require('./generated/generated'); // eslint-disable-line
-import path from 'path';
-import fs from 'fs';
-
-const pegPath = path.join('..', 'apex.peggy');
 
 export function parse(widl: string, source = 'n/a'): any {
   try {

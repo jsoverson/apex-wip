@@ -15,22 +15,30 @@ async function main() {
     const apexSrc = fs.readFileSync(fromPath, "utf-8");
     const doc = parse(apexSrc);
 
-    /// temporary translations from old -> new
+    // temporary translations from old -> new
 
+    // Changed root Document type to ApexDocument
     doc.kind = "ApexDocument";
+
+    // Changed namespace name to a StringValue
     doc.definitions.forEach((def) => {
       if (def.getKind() === "NamespaceDefinition") {
         def.name = new ast.StringValue(def.getLoc(), def.name.value);
       }
     });
 
-    ///
-
     const json = JSON.stringify(
       doc,
-      (k, v) => (k === "loc" ? undefined : v),
+      (k, v) => {
+        // Remove "loc" from comparisons
+        if (k === "loc") return undefined;
+        return v;
+      },
       2
     );
+
+    // End changes
+
     fs.writeFileSync(toPath, json);
   }
 }

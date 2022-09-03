@@ -64,7 +64,15 @@ export class TypeScriptVisitor extends BaseVisitor {
     );
 
     const assignments = fields.map((field) => {
-      return parseStatement(`this.${field.name} = ${sanitize(field.name)}`);
+      if (isOptional(field.type)) {
+        return parseStatement(
+          `if (${sanitize(field.name)} !== undefined) this.${
+            field.name
+          } = ${sanitize(field.name)}`
+        );
+      } else {
+        return parseStatement(`this.${field.name} = ${sanitize(field.name)}`);
+      }
     });
 
     const initializerBody = ts.factory.createBlock(assignments);
@@ -120,9 +128,8 @@ class TypeVisitor extends BaseVisitor {
   visitTypeField(context: Context): void {
     const element = ts.factory.createPropertyDeclaration(
       undefined,
-
       context.field.name,
-      undefined,
+      questionToken(context.field.type),
       convertType(context.field.type),
       expandDefault(context.field.node.default)
     );
@@ -171,10 +178,7 @@ function convertType(typ: AnyType): ts.TypeNode {
     case Kind.Optional: {
       const t = typ as Optional;
       const innerType = convertType(t.type);
-      return ts.factory.createUnionTypeNode([
-        innerType,
-        ts.factory.createTypeReferenceNode("undefined"),
-      ]);
+      return innerType;
     }
     case Kind.Union: {
       const t = typ as Union;

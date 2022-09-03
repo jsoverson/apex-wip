@@ -1,0 +1,126 @@
+namespace "apexlang.v2"
+
+alias Type = string
+alias Value = string
+
+type Document {
+  description: string?     @docs
+  namespace:   Namespace   @keyword("namespace")
+  imports:     [Import]    @keyword("import")
+  directives:  [Directive] @keyword("directive")
+  shapes:      [Shape]     @keyword("shape")
+  aliases:     [Alias]     @keyword("alias")
+  unions:      [Union]     @keyword("union")
+  functions:   [Operation] @keyword("func")
+  # covers built-in `type` and `interface`
+  groups:      [Group]     @keyword("*")
+}
+
+type Import {
+  names: [TypeRef] @wrapped(begin: "{", end: "}", delimiters: [",", "\n"]) @or("*") @after("from")
+  from:  string    @quoted
+}
+
+type TypeRef {
+  name: string
+  as:   string? @before("as")
+}
+
+type Shape {
+  description: string? @docs
+  name:        string  @quoted
+  fields:      [Name]  @keyword("field") @or("*")
+  operations:  [Name]  @keyword("operation") @or("*")
+  groups:      [Shape] @keyword("group") @or("*")
+}
+
+type Name {
+  description: string?  @docs
+  name:        string   @quoted
+}
+
+type Group {
+  description: string?     @docs
+  name:        string      @quoted
+  fields:      [Field]     @detect([":"])
+  operations:  [Operation] @detect(["(", "{"]) # conflict with {}
+  groups:      [Group]     @detect(["{"]) # use a keyword?
+}
+
+type Namespace {
+  description: string? @docs
+  name:        string  @quoted
+}
+
+type Alias {
+  description: string? @docs
+  name:        string  @after("=")
+  type:        Type
+}
+
+type Operation {
+  description: string?      @docs
+  name:        string       @after(":")
+  parameters:  [Parameter]? @wrapped(begin: "(", end: ")", delimiters: [",", "\n"])
+  unary:       Parameter?   @wrapped(begin: "{", end: "}")
+  returns:     Type
+  annotations: [Annotation] @before("@")
+}
+
+type Parameter {
+  description:  string?      @docs
+  name:         string       @after(":")
+  type:         Type
+  defaultValue: Value?       @before("=")
+  annotations:  [Annotation] @before("@")
+}
+
+type Field {
+  description:  string?      @docs
+  name:         string       @after(":")
+  type:         Type
+  defaultValue: Value?       @before("=")
+  annotations:  [Annotation] @before("@")
+}
+
+type Union {
+  description: string? @docs
+  name:        string
+  types:       [Type]  @wrapped(delimiters: ["|"])
+}
+
+type Enum {
+  description: string?     @docs
+  name:        string
+  values:      [EnumValue]
+}
+
+type EnumValue {
+  description: string? @docs
+  name:        string  @after(":")
+  index:       u64
+  display:     string? @before("=")
+}
+
+type Directive {
+  description: string?      @docs
+  name:        string       @before("@")
+  parameters:  [Parameter]? @wrapped(begin: "(", end: ")", delimiters: [",", "\n"])
+  locations:   [string]     @wrapped(delimiters: ["|"])
+  require:     Require?     @keyword("require")
+}
+
+type Require {
+  directive: string   @after("on")
+  locations: [string]
+}
+
+type Annotation {
+  name:      string
+  arguments: [Argument] @wrapped(begin: "(", end: ")", delimiters: [",", "\n"])
+}
+
+type Argument {
+  name:  string @after(":")
+  value: Value
+}

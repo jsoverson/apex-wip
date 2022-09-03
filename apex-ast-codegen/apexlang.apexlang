@@ -48,12 +48,6 @@ type Argument {
   value: Value
 }
 
-type DirectiveRequire {
-  kind: string = "DirectiveRequire"
-  imported: bool = false
-  directive: Name
-}
-
 type ImportName {
   kind: string = "ImportName"
   imported: bool = false
@@ -67,6 +61,20 @@ type NamespaceDefinition {
   name: StringValue
   description: StringValue?
   annotations: [Annotation] = []
+}
+
+type DirectiveDefinition {
+  kind: "DirectiveDefinition"
+  name: Name
+  parameters: [ParameterDefinition]
+  description: StringValue?
+  requires: [DirectiveRequire]
+}
+
+type DirectiveRequire {
+  kind: string = "DirectiveRequire"
+  imported: bool = false
+  directive: Name
 }
 
 type AliasDefinition {

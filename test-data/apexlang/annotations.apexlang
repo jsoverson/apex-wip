@@ -13,7 +13,7 @@ enum SDAF @enum {
 type Test @type {
   foo: string @typefield(value: 1234) @length(5)
     @response(
-      status: CREATED,
+      status: CREATED
       examples: {
         "application/json": "json"
         csv: "csv"

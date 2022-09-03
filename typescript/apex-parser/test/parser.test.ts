@@ -13,7 +13,7 @@ function assertParity(source: string): string {
   const jsonFile = `${source}.apexlang.json`;
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const expectedTree = require(path.join(expectedDir, `json`, jsonFile));
-  const actualJson = JSON.stringify(actualDoc, (key: string, val: any) => (key === 'loc' ? undefined : val));
+  const actualJson = JSON.stringify(actualDoc, (key: string, val: unknown) => (key === 'loc' ? undefined : val));
   const actualTree = JSON.parse(actualJson);
   const actualDir = path.join(__dirname, 'serialized');
   fs.mkdirSync(actualDir, { recursive: true });
@@ -50,4 +50,7 @@ describe('apex document parser', function () {
   // it('should parse test spec from apex project', () => {
   //   assertParity('test-data-1');
   // });
+  it('should parse openapi spec', () => {
+    assertParity('openapi');
+  });
 });
