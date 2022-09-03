@@ -1,21 +1,26 @@
-# Work-in-progress WIDL spec and downstream libraries
+# Work-in-progress Apex spec along with generated parsers and libraries.
 
-## Files to note
+## Prerequisites
 
-- [widl spec](https://github.com/jsoverson/widl-wip/blob/master/widl-spec/widl.idl) (defined in [WebIDL](https://en.wikipedia.org/wiki/Web_IDL))
-- [Generated TypeScript AST nodes](https://github.com/jsoverson/widl-wip/blob/master/widl-ast-js/src/generated.ts)
-- [Generated Rust AST nodes](https://github.com/jsoverson/widl-wip/blob/master/widl-ast-rust/src/ast.rs)
-- [TypeScript parser grammar (pegjs)](https://github.com/jsoverson/widl-wip/blob/master/widl-parser-js/widl.pegjs)
-- [Rust parser grammar (pest)](https://github.com/jsoverson/widl-wip/blob/master/widl-parser-rust/src/widl.pest)
-- tests in [js](https://github.com/jsoverson/widl-wip/tree/master/widl-parser-js/test) & [rust](https://github.com/jsoverson/widl-wip/blob/master/widl-parser-rust/src/lib.rs#L227-L464) to ensure consistency.
+This repository uses the `task` task runner. Install it from [taskfile.dev](https://taskfile.dev/installation/).
 
-## Notes
+## Running tests
 
-These are experimental works in progress. The parsers only parse four top-level definitions right now: namespaces, interfaces, type definitions, and imports. The rest aren't difficult to add but there's only so much time in the day.
+```shell-session
+user@host$ task test
+```
 
-## Todo
+This will:
 
-- Finish parsers
-- Add cross-parser serialization/deserialization tests
-- (Wishlist) find a common PEG syntax that every language can use
-- (Wishlist) Define WIDL's IDl in WIDL and parse WIDL with WIDL
+- generate test data from the latest published version of `@apexlang/core`
+- generate AST libraries in typescript
+- generate TypeScript-based Apex parser
+- build all TypeScript
+- run tests
+
+## Files to note:
+
+- [Apex spec](https://github.com/jsoverson/apex-wip/blob/main/apex-ast-codegen/apexlang.apexlang) (defined in Apex)
+- [Generated TypeScript AST nodes](https://github.com/jsoverson/apex-wip/blob/main/typescript/apex-ast/src/generated.ts)
+- [TypeScript parser grammar (pegjs)](https://github.com/jsoverson/apex-wip/blob/main/typescript/apex-parser/apex.peggy)
+- [test data](https://github.com/jsoverson/apex-wip/blob/main/test-data/apexlang/) serialized to [JSON](https://github.com/jsoverson/apex-wip/blob/main/test-data/json/) and unit tests in [js](https://github.com/jsoverson/apex-wip/tree/main/typescript/apex-parser/test/).
