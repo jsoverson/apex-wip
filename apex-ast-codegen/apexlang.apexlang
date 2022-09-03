@@ -26,7 +26,7 @@ union Value = IntValue | FloatValue | StringValue | BooleanValue | EnumValue | L
 
 union TypeReference = PrimitiveType | Named | ListType | MapType | Optional
 
-union AstNode = Value | ApexDocument | Annotation | Argument | DirectiveRequire | ImportName | AliasDefinition | ImportDefinition | TypeDefinition | OperationDefinition | FieldDefinition | ParameterDefinition | InterfaceDefinition | RoleDefinition | UnionDefinition | EnumDefinition | EnumValueDefinition | DirectiveDefinition | ListType | MapType | Optional | IntValue | FloatValue | StringValue | BooleanValue | EnumValue | ListValue | ObjectValue | ObjectField
+union AstNode = Value | ApexDocument | Annotation | Argument | DirectiveRequire | ImportName | AliasDefinition | ImportDefinition | TypeDefinition | OperationDefinition | FieldDefinition | InterfaceDefinition | RoleDefinition | UnionDefinition | EnumDefinition | EnumValueDefinition | DirectiveDefinition | ListType | MapType | Optional | IntValue | FloatValue | StringValue | BooleanValue | EnumValue | ListValue | ObjectValue | ObjectField
 
 type ApexDocument {
   kind: string = "ApexDocument"
@@ -66,7 +66,7 @@ type NamespaceDefinition {
 type DirectiveDefinition {
   kind: "DirectiveDefinition"
   name: Name
-  parameters: [ParameterDefinition]
+  parameters: [FieldDefinition]
   description: StringValue?
   requires: [DirectiveRequire]
 }
@@ -111,7 +111,7 @@ type OperationDefinition {
   imported: bool = false
   name: Name
   description: StringValue?
-  parameters: [ParameterDefinition]
+  parameters: [FieldDefinition]
   type: TypeReference
   unary: bool
   annotations: [Annotation] = []
@@ -119,16 +119,6 @@ type OperationDefinition {
 
 type FieldDefinition {
   kind: string = "FieldDefinition"
-  imported: bool = false
-  name: Name
-  description: StringValue?
-  type: TypeReference
-  default: Value?
-  annotations: [Annotation] = []
-}
-
-type ParameterDefinition {
-  kind: string = "ParameterDefinition"
   imported: bool = false
   name: Name
   description: StringValue?
@@ -187,7 +177,7 @@ type DirectiveDefinition {
   imported: bool = false
   name: Name
   description: StringValue?
-  parameters: [ParameterDefinition]
+  parameters: [FieldDefinition]
   locations: [Name]
   requires: [DirectiveRequire]
 }

@@ -14,7 +14,8 @@ export class Annotation {
   arguments?: Argument[];
   constructor(name: Name, _arguments?: Argument[]) {
     this.name = name;
-    if (_arguments !== undefined) this.arguments = _arguments;
+    if (_arguments !== undefined && _arguments !== null)
+      this.arguments = _arguments;
   }
 }
 export class Argument {
@@ -34,7 +35,7 @@ export class ImportName {
   alias?: Name;
   constructor(name: Name, alias?: Name) {
     this.name = name;
-    if (alias !== undefined) this.alias = alias;
+    if (alias !== undefined && alias !== null) this.alias = alias;
   }
 }
 export class NamespaceDefinition {
@@ -49,7 +50,8 @@ export class NamespaceDefinition {
     annotations: Annotation[] = []
   ) {
     this.name = name;
-    if (description !== undefined) this.description = description;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -76,7 +78,8 @@ export class AliasDefinition {
   ) {
     this.name = name;
     this.type = type;
-    if (description !== undefined) this.description = description;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -98,7 +101,8 @@ export class ImportDefinition {
     this.all = all;
     this.names = names;
     this.from = from;
-    if (description !== undefined) this.description = description;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -119,8 +123,10 @@ export class TypeDefinition {
   ) {
     this.name = name;
     this.fields = fields;
-    if (interfaces !== undefined) this.interfaces = interfaces;
-    if (description !== undefined) this.description = description;
+    if (interfaces !== undefined && interfaces !== null)
+      this.interfaces = interfaces;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -129,13 +135,13 @@ export class OperationDefinition {
   imported: boolean = false;
   name: Name;
   description?: StringValue;
-  parameters: ParameterDefinition[];
+  parameters: FieldDefinition[];
   type: TypeReference;
   unary: boolean;
   annotations: Annotation[] = [];
   constructor(
     name: Name,
-    parameters: ParameterDefinition[],
+    parameters: FieldDefinition[],
     type: TypeReference,
     unary: boolean,
     description?: StringValue,
@@ -145,7 +151,8 @@ export class OperationDefinition {
     this.parameters = parameters;
     this.type = type;
     this.unary = unary;
-    if (description !== undefined) this.description = description;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -166,30 +173,9 @@ export class FieldDefinition {
   ) {
     this.name = name;
     this.type = type;
-    if (_default !== undefined) this.default = _default;
-    if (description !== undefined) this.description = description;
-    this.annotations = annotations;
-  }
-}
-export class ParameterDefinition {
-  kind: string = "ParameterDefinition";
-  imported: boolean = false;
-  name: Name;
-  description?: StringValue;
-  type: TypeReference;
-  default?: Value;
-  annotations: Annotation[] = [];
-  constructor(
-    name: Name,
-    type: TypeReference,
-    _default?: Value,
-    description?: StringValue,
-    annotations: Annotation[] = []
-  ) {
-    this.name = name;
-    this.type = type;
-    if (_default !== undefined) this.default = _default;
-    if (description !== undefined) this.description = description;
+    if (_default !== undefined && _default !== null) this.default = _default;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -205,7 +191,8 @@ export class InterfaceDefinition {
     annotations: Annotation[] = []
   ) {
     this.operations = operations;
-    if (description !== undefined) this.description = description;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -224,7 +211,8 @@ export class RoleDefinition {
   ) {
     this.name = name;
     this.operations = operations;
-    if (description !== undefined) this.description = description;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -243,7 +231,8 @@ export class UnionDefinition {
   ) {
     this.name = name;
     this.types = types;
-    if (description !== undefined) this.description = description;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -262,7 +251,8 @@ export class EnumDefinition {
   ) {
     this.name = name;
     this.values = values;
-    if (description !== undefined) this.description = description;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -283,8 +273,9 @@ export class EnumValueDefinition {
   ) {
     this.name = name;
     this.index = index;
-    if (display !== undefined) this.display = display;
-    if (description !== undefined) this.description = description;
+    if (display !== undefined && display !== null) this.display = display;
+    if (description !== undefined && description !== null)
+      this.description = description;
     this.annotations = annotations;
   }
 }
@@ -293,12 +284,12 @@ export class DirectiveDefinition {
   imported: boolean = false;
   name: Name;
   description?: StringValue;
-  parameters: ParameterDefinition[];
+  parameters: FieldDefinition[];
   locations: Name[];
   requires: DirectiveRequire[];
   constructor(
     name: Name,
-    parameters: ParameterDefinition[],
+    parameters: FieldDefinition[],
     locations: Name[],
     requires: DirectiveRequire[],
     description?: StringValue
@@ -307,7 +298,8 @@ export class DirectiveDefinition {
     this.parameters = parameters;
     this.locations = locations;
     this.requires = requires;
-    if (description !== undefined) this.description = description;
+    if (description !== undefined && description !== null)
+      this.description = description;
   }
 }
 export class Name {
@@ -453,7 +445,6 @@ export type AstNode =
   | TypeDefinition
   | OperationDefinition
   | FieldDefinition
-  | ParameterDefinition
   | InterfaceDefinition
   | RoleDefinition
   | UnionDefinition

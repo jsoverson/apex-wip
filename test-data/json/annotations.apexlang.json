@@ -68,7 +68,7 @@
           "parameters": [
             {
               "imported": false,
-              "kind": "ParameterDefinition",
+              "kind": "FieldDefinition",
               "name": {
                 "imported": false,
                 "kind": "Name",
@@ -98,7 +98,7 @@
             },
             {
               "imported": false,
-              "kind": "ParameterDefinition",
+              "kind": "FieldDefinition",
               "name": {
                 "imported": false,
                 "kind": "Name",
@@ -117,7 +117,7 @@
             },
             {
               "imported": false,
-              "kind": "ParameterDefinition",
+              "kind": "FieldDefinition",
               "name": {
                 "imported": false,
                 "kind": "Name",

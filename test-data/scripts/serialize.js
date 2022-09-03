@@ -32,6 +32,9 @@ async function main() {
       (k, v) => {
         // Remove "loc" from comparisons
         if (k === "loc") return undefined;
+        // ParameterDefinitions are the same as FieldDefinitions, so removing ParameterDefinitions
+        if (k === "kind" && v === "ParameterDefinition")
+          return "FieldDefinition";
         return v;
       },
       2
@@ -44,5 +47,3 @@ async function main() {
 }
 
 main();
-
-// console.log(JSON.stringify(parse(process.args[1])));

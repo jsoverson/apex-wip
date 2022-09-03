@@ -66,9 +66,9 @@ export class TypeScriptVisitor extends BaseVisitor {
     const assignments = fields.map((field) => {
       if (isOptional(field.type)) {
         return parseStatement(
-          `if (${sanitize(field.name)} !== undefined) this.${
+          `if (${sanitize(field.name)} !== undefined && ${sanitize(
             field.name
-          } = ${sanitize(field.name)}`
+          )} !== null) this.${field.name} = ${sanitize(field.name)}`
         );
       } else {
         return parseStatement(`this.${field.name} = ${sanitize(field.name)}`);

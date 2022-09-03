@@ -21,7 +21,7 @@ describe(rule, function () {
     expect(tree).to.deep.equal(
       new ast.OperationDefinition(
         new ast.Name('opName'),
-        [new ast.ParameterDefinition(new ast.Name('msg'), new ast.Named(new ast.Name('string')))],
+        [new ast.FieldDefinition(new ast.Name('msg'), new ast.Named(new ast.Name('string')))],
         new ast.Named(new ast.Name('string')),
         false,
       ),

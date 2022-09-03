@@ -23,7 +23,7 @@ function assertParity(source: string): string {
 }
 
 describe('apex document parser', function () {
-  it('should parse types', () => {
+  it('should parse alltypes', () => {
     assertParity('alltypes');
   });
   it('should parse interfaces', () => {

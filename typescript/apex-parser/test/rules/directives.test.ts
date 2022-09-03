@@ -18,8 +18,8 @@ describe(rule, function () {
       new ast.DirectiveDefinition(
         name('info'),
         [
-          new ast.ParameterDefinition(name('title'), new ast.Named(name('string'))),
-          new ast.ParameterDefinition(name('termsOfService'), new ast.Optional(new ast.Named(name('string')))),
+          new ast.FieldDefinition(name('title'), new ast.Named(name('string'))),
+          new ast.FieldDefinition(name('termsOfService'), new ast.Optional(new ast.Named(name('string')))),
         ],
         [name('NAMESPACE')],
         [],
