@@ -12,7 +12,7 @@ namespace "apex.testing"
       name: "API Support"
       url: "https://api.goodcorp.com/support"
       email: "api@goodcorp.com"
-    },
+    }
     license: {
       name: "Apache 2.0"
       url: "https://www.apache.org/licenses/LICENSE-2.0"
@@ -173,8 +173,6 @@ type MyType {
   aliasValue: UUID @n(37)
   "enum option"
   aliasOption: UUID? @n(38)
-  # "any value"
-  # anyValue: any @n(999)
 }
 
 type MyOtherType {

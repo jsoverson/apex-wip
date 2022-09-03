@@ -20,8 +20,10 @@ definition
     namespaceDefinition /
     typeDefinition /
     interfaceDefinition /
+    roleDefinition /
     directiveDefinition /
     unionDefinition /
+    aliasDefinition /
     enumDefinition /
     importDefinition
   )
@@ -86,6 +88,16 @@ unionDefinition =
   return new ast.UnionDefinition(name, types, description || undefined, annotations)
 }
 
+aliasDefinition =
+  description:description?
+  aliasKeyword hws name:identifier
+  annotations:annotation*
+  ws assignmentOperator ws
+  type:apexType
+{
+  return new ast.AliasDefinition(name, type, description || undefined, annotations)
+}
+
 enumDefinition =
   description:description? enumKeyword  ws name:identifier ws annotations:annotation* ws beginObjectChar ws values:(ws @enumValue eol)* ws endObjectChar
 {
@@ -106,12 +118,19 @@ interfaceDefinition =
   return new ast.InterfaceDefinition(operations, description || undefined, annotations);
 }
 
+roleDefinition =
+  description:description? roleKeyword hws name:identifier hws annotations:annotation* ws beginObjectChar ws operations:(ws @operation eol)* ws endObjectChar
+{
+  return new ast.RoleDefinition(name, operations, description || undefined, annotations);
+}
+
 operation =
   description:description?
-  name:identifier ws args:parameterGroup ws colonSeparator type:apexType
+  name:identifier ws args:(parameterGroup / unaryParameter) ws colonSeparator type:apexType
   annotations:annotation*
 {
-  return new ast.OperationDefinition(name, args, type, false, description || undefined, annotations);
+
+  return new ast.OperationDefinition(name, args.args, type, args.unary, description || undefined, annotations);
 }
 
 parameterDefinition =
@@ -131,7 +150,12 @@ fieldDefinition =
 }
 
 parameterGroup = beginArgumentsChar args:parameters? endArgumentsChar {
-  return args || []
+  return {unary: false, args: args || []}
+}
+
+
+unaryParameter = beginObjectChar arg:parameterDefinition endObjectChar {
+  return {unary: true, args: [arg]}
 }
 
 parameters = ws values:(@parameterDefinition commaSeparator)* last:parameterDefinition? ws
@@ -254,6 +278,7 @@ listType =
 
 // Keywords
 interfaceKeyword = "interface"
+roleKeyword = "role"
 namespaceKeyword = "namespace"
 typeKeyword = "type"
 enumKeyword = "enum"

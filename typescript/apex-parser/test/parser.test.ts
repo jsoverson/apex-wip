@@ -47,9 +47,9 @@ describe('apex document parser', function () {
   it('should parse default values on types', () => {
     assertParity('defaults');
   });
-  // it('should parse test spec from apex project', () => {
-  //   assertParity('test-data-1');
-  // });
+  it('should parse test spec from apex project', () => {
+    assertParity('test-data-1');
+  });
   it('should parse openapi spec', () => {
     assertParity('openapi');
   });
